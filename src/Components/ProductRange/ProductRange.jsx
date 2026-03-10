@@ -22,7 +22,7 @@ const ProductRange = () => {
     <div className="  flex flex-col justify-center items-center lg:py-[100px] md:py-[60px] py-10 md:px-10 px-5">
       <div className="lg:container w-full mx-auto">
         <div className="lg:pb-[60px] md:pb-10 pb-[30px]">
-          <h2 className="text-4xl font-bold text-center text-[#333333] pb-6">
+          <h2 className="text-4xl font-bold text-center text-[#333333] pb-4">
             Browse The Range
           </h2>
           <p className="text-base text-center text-[#666666]">
