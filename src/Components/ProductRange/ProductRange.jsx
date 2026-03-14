@@ -33,7 +33,7 @@ const ProductRange = () => {
 
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1  md:gap-5 gap-7">
           {productRange.map((product) => (
-            <div className=" group cursor-pointer space-y-5 ">
+            <div key={product.id} className=" group cursor-pointer space-y-5">
               <div className=" overflow-hidden rounded-xl">
                 <img
                   src={product.img}

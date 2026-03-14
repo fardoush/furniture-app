@@ -80,7 +80,7 @@ const PhotoGallery = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4 auto-rows-[180px]">
           {photoGallery.map((gallery) => (
-            <div
+            <div key={gallery.id}
               className={`${gallery.colSpan} md:col-span-2 ${gallery.rowSpan} overflow-hidden group relative rounded-sm `}
             >
               <img
