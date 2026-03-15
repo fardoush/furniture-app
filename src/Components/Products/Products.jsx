@@ -1,12 +1,12 @@
 
 import ProductCard from '../ProductCard/ProductCard';
 
-const Products = ({products}) => {
+const Products = ({products, visible}) => {
 
     return (
         <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-8 '>
             {
-                products.map((product) =>(
+                products.slice(0,visible).map((product) =>(
                     <ProductCard product={product} key={product.id}/>
                 ))
             }

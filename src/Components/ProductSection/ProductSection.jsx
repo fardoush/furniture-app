@@ -1,8 +1,13 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import { Circles } from "react-loader-spinner";
 import Products from "../Products/Products";
 
 const ProductSection = ({products}) => {
+    const [visible, setVisible] = useState(6);
+
+    const handleSeeMore = () => {
+      setVisible(products.length);
+    }
 
   return (
     <div className="lg:container w-full mx-auto lg:py-[100px] md:py-[60px] py-10">
@@ -25,11 +30,11 @@ const ProductSection = ({products}) => {
           </div>
         }
       >
-        <Products products={products} />
+        <Products products={products} visible={visible} />
       </Suspense>
 
       <div className="flex items-center justify-center py-10">
-        <button className="btn py-3 px-12 border-2 border-primary bg-transparent text-primary transition-colors duration-500 hover:bg-primary hover:text-white tracking-wide  rounded-none">See More</button>
+        <button onClick={handleSeeMore} className="btn py-3 px-12 border-2 border-primary bg-transparent text-primary transition-colors duration-500 hover:bg-primary hover:text-white tracking-wide  rounded-none">See More</button>
       </div>
 
     </div>

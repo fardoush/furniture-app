@@ -1,0 +1,48 @@
+import React, { Suspense, useState } from "react";
+import DefaultBanner from "../../Components/DefaultBanner/DefaultBanner";
+import { useLoaderData } from "react-router";
+import Shops from "../../Components/Shops/Shops";
+
+const ShopPage = () => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const pages = [1, 2, 3, 4];
+  const products = useLoaderData();
+  console.log(products);
+  return (
+    <div>
+      <DefaultBanner />
+
+      <div className="lg:container w-full mx-auto lg:py-[60px] md:py-10 py-[30px]">
+        <Suspense
+          fallback={<span className="loading loading-bars loading-xl"></span>}
+        >
+          <Shops products={products} />
+        </Suspense>
+
+        {/* pagination  */}
+        <div className="flex items-center justify-center  gap-3 pt-10">
+          {pages.map((page) => (
+            <button
+              onClick={() => setCurrentPage(page)}
+              key={page}
+              className={`w-12 h-12 rounded-lg  transition-all duration-300
+                ${
+                  currentPage === page
+                    ? "bg-primary text-white font-semibold"
+                    : " text-black bg-[#F9F1E7] hover:bg-primary hover:text-white font-normal"
+                }
+                `}
+            >
+              {page}
+            </button>
+          ))}
+          <button className="px-6 h-12 rounded-lg bg-[#F9F1E7] text-black  text-[16px] hover:bg-[#B88E2F] hover:text-white transition-all duration-300">
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ShopPage;

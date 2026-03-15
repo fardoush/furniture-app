@@ -4,32 +4,46 @@ import Home from "../Pages/home/Home.jsx";
 import ProductRange from "../Components/ProductRange/ProductRange.jsx";
 import PhotoGallery from "../Components/PhotoGallery/PhotoGallery.jsx";
 import ProductSection from "../Components/ProductSection/ProductSection.jsx";
-
-
+import ErrorPage from "../Pages/ErrorPage/ErrorPage.jsx";
+import ShopPage from "../Pages/ShopPage/ShopPage.jsx";
+import Shops from "../Components/Shops/Shops.jsx";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: MainLayout,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
-        loader: () => fetch('../../public/products.json'),
+        loader: () => fetch("../../public/products.json"),
         Component: Home,
       },
       {
-        path:"product-range",
-        Component: ProductRange
+        path: "product-range",
+        Component: ProductRange,
       },
       {
-        path:"products",
-        Component: ProductSection
+        path: "products",
+        Component: ProductSection,
       },
       {
-        path:"gallery",
-        Component: PhotoGallery
+        path: "gallery",
+        Component: PhotoGallery,
       },
-      
+    ],
+  },
+  {
+    path: "/shop",
+    Component: MainLayout,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        index: true,
+         loader: () => fetch("../../public/products.json"),
+        Component: ShopPage,
+      },
+     
     ],
   },
 ]);
