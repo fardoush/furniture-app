@@ -102,5 +102,171 @@
     "discountPrice": 500000,
     "image": "/src/assets/product12.jpg",
     "tag": "discount"
+  },
+  
+  {
+    "id": 13,
+    "title": "Nordic Chair",
+    "subtitle": "Minimal wooden chair",
+    "price": 320000,
+    "image": "https://images.unsplash.com/photo-1503602642458-232111445657",
+    "tag": ""
+  },
+  {
+    "id": 14,
+    "title": "Classic Sofa",
+    "subtitle": "Comfortable 3 seat sofa",
+    "price": 950000,
+    "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
+    "tag": "new"
+  },
+  {
+    "id": 15,
+    "title": "Wooden Table",
+    "subtitle": "Solid oak dining table",
+    "price": 780000,
+    "image": "https://images.unsplash.com/photo-1493666438817-866a91353ca9",
+    "tag": ""
+  },
+  {
+    "id": 16,
+    "title": "Modern Lamp",
+    "subtitle": "Decorative bedside lamp",
+    "price": 120000,
+    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c",
+    "tag": "new"
+  },
+  {
+    "id": 17,
+    "title": "Luxury Bed",
+    "subtitle": "King size modern bed",
+    "price": 1500000,
+    "image": "https://images.unsplash.com/photo-1505693314120-0d443867891c",
+    "tag": ""
+  },
+  {
+    "id": 18,
+    "title": "Office Chair",
+    "subtitle": "Ergonomic work chair",
+    "price": 420000,
+    "image": "https://images.unsplash.com/photo-1580480055273-228ff5388ef8",
+    "tag": ""
+  },
+  {
+    "id": 19,
+    "title": "Coffee Table",
+    "subtitle": "Small living room table",
+    "price": 260000,
+    "image": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88",
+    "tag": "new"
+  },
+  {
+    "id": 20,
+    "title": "Bookshelf",
+    "subtitle": "Modern wooden bookshelf",
+    "price": 540000,
+    "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36",
+    "tag": ""
+  },
+  {
+    "id": 21,
+    "title": "Dining Set",
+    "subtitle": "Table with 4 chairs",
+    "price": 1200000,
+    "image": "https://images.unsplash.com/photo-1617806118233-18e1de247200",
+    "tag": "discount",
+    "discount": "15%",
+    "discountPrice": 1400000
+  },
+  {
+    "id": 22,
+    "title": "Wall Shelf",
+    "subtitle": "Floating wooden shelf",
+    "price": 90000,
+    "image": "https://images.unsplash.com/photo-1598300056393-4aac492f4344",
+    "tag": ""
+  },
+  {
+    "id": 23,
+    "title": "Recliner Sofa",
+    "subtitle": "Luxury reclining sofa",
+    "price": 1750000,
+    "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
+    "tag": ""
+  },
+  {
+    "id": 24,
+    "title": "Bedside Table",
+    "subtitle": "Compact nightstand",
+    "price": 180000,
+    "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457",
+    "tag": "new"
+  },
+  {
+    "id": 25,
+    "title": "Bar Stool",
+    "subtitle": "High wooden bar stool",
+    "price": 210000,
+    "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
+    "tag": ""
+  },
+  {
+    "id": 26,
+    "title": "Wardrobe",
+    "subtitle": "Large wooden wardrobe",
+    "price": 2200000,
+    "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf",
+    "tag": ""
+  },
+  {
+    "id": 27,
+    "title": "Outdoor Chair",
+    "subtitle": "Garden lounge chair",
+    "price": 330000,
+    "image": "https://images.unsplash.com/photo-1600210492493-0946911123ea",
+    "tag": "new"
+  },
+  {
+    "id": 28,
+    "title": "TV Cabinet",
+    "subtitle": "Modern media console",
+    "price": 640000,
+    "image": "https://images.unsplash.com/photo-1588854337115-1c67d9247e4d",
+    "tag": ""
+  },
+  {
+    "id": 29,
+    "title": "Corner Sofa",
+    "subtitle": "L shape living sofa",
+    "price": 1600000,
+    "image": "https://images.unsplash.com/photo-1567016432779-094069958ea5",
+    "tag": "discount",
+    "discount": "20%",
+    "discountPrice": 2000000
+  },
+  {
+    "id": 30,
+    "title": "Glass Table",
+    "subtitle": "Modern glass top table",
+    "price": 480000,
+    "image": "https://images.unsplash.com/photo-1615874959474-d609969a20ed",
+    "tag": ""
+  },
+  {
+    "id": 31,
+    "title": "Kids Bed",
+    "subtitle": "Colorful children bed",
+    "price": 730000,
+    "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf",
+    "tag": "new"
+  },
+  {
+    "id": 32,
+    "title": "Luxury Armchair",
+    "subtitle": "Soft velvet armchair",
+    "price": 390000,
+    "image": "https://images.unsplash.com/photo-1519947486511-46149fa0a254",
+    "tag": ""
   }
+
 ]

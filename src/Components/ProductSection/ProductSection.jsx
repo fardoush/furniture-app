@@ -1,14 +1,9 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense } from "react";
 import { Circles } from "react-loader-spinner";
 import Products from "../Products/Products";
+import { Link } from "react-router";
 
-const ProductSection = ({products}) => {
-    const [visible, setVisible] = useState(6);
-
-    const handleSeeMore = () => {
-      setVisible(products.length);
-    }
-
+const ProductSection = ({ products }) => {
   return (
     <div className="lg:container w-full mx-auto lg:py-[100px] md:py-[60px] py-10">
       <div className="lg:pb-[60px] md:pb-10 pb-[30px]">
@@ -30,13 +25,17 @@ const ProductSection = ({products}) => {
           </div>
         }
       >
-        <Products products={products} visible={visible} />
+        <Products products={products} />
       </Suspense>
 
       <div className="flex items-center justify-center py-10">
-        <button onClick={handleSeeMore} className="btn py-3 px-12 border-2 border-primary bg-transparent text-primary transition-colors duration-500 hover:bg-primary hover:text-white tracking-wide  rounded-none">See More</button>
+        <Link
+          to="/shop"
+          className="btn py-3 px-12 border-2 border-primary bg-transparent text-primary transition-colors duration-500 hover:bg-primary hover:text-white tracking-wide  rounded-none"
+        >
+          See More
+        </Link>
       </div>
-
     </div>
   );
 };

@@ -37,7 +37,7 @@ const ProductCard = ({ product }) => {
       
 
       <div className="p-4 md:p-6">
-        <h3 className="text-[#3A3A3A] font-bold text-[24px] mb-1">{title}</h3>
+        <h3 className="text-[#3A3A3A] font-bold text-[24px] mb-1 group-hover:text-primary transition-colors duration-500">{title}</h3>
         <p className="text-[#898989] font-medium text-[16px] mb-2">{subtitle}</p>
         
         <div className="flex items-center justify-between">

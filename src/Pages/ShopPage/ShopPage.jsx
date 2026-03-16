@@ -4,10 +4,20 @@ import { useLoaderData } from "react-router";
 import Shops from "../../Components/Shops/Shops";
 
 const ShopPage = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const pages = [1, 2, 3, 4];
+  // dala load
   const products = useLoaderData();
-  console.log(products);
+
+  // pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+  const lastIndex = currentPage * itemsPerPage;
+  const firstIndex = lastIndex - itemsPerPage;
+  const currentProducts = products.slice(firstIndex, lastIndex);
+  // const pages = [1, 2, 3, 4];
+  const totalPages = Math.ceil(products.length / itemsPerPage);
+  const pages = [...Array(totalPages).keys()].map((n) => n + 1);
+
+  // console.log(products);
   return (
     <div>
       <DefaultBanner />
@@ -16,14 +26,19 @@ const ShopPage = () => {
         <Suspense
           fallback={<span className="loading loading-bars loading-xl"></span>}
         >
-          <Shops products={products} />
+          <Shops products={currentProducts} />
         </Suspense>
 
         {/* pagination  */}
         <div className="flex items-center justify-center  gap-3 pt-10">
+          <button disabled = {currentPage === 1}
+              onClick={() => setCurrentPage(currentPage - 1)}  className="px-6 h-12 rounded-lg bg-[#F9F1E7] text-black  text-[16px] hover:bg-[#B88E2F] hover:text-white transition-all duration-300">
+            Prev
+          </button>
           {pages.map((page) => (
             <button
-              onClick={() => setCurrentPage(page)}
+            disabled = {currentPage === totalPages}
+              onClick={() => setCurrentPage(currentPage + 1)}
               key={page}
               className={`w-12 h-12 rounded-lg  transition-all duration-300
                 ${
@@ -33,10 +48,12 @@ const ShopPage = () => {
                 }
                 `}
             >
-              {page}
+              {page} 
+          
             </button>
           ))}
-          <button className="px-6 h-12 rounded-lg bg-[#F9F1E7] text-black  text-[16px] hover:bg-[#B88E2F] hover:text-white transition-all duration-300">
+          <button disabled = {currentPage === totalPages}
+              onClick={() => setCurrentPage(currentPage + 1)}  className="px-6 h-12 rounded-lg bg-[#F9F1E7] text-black  text-[16px] hover:bg-[#B88E2F] hover:text-white transition-all duration-300">
             Next
           </button>
         </div>
