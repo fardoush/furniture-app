@@ -2,6 +2,7 @@ import React, { Suspense, useState } from "react";
 import DefaultBanner from "../../Components/DefaultBanner/DefaultBanner";
 import { useLoaderData } from "react-router";
 import Shops from "../../Components/Shops/Shops";
+import ShopToolbar from "../../Components/ShopToolbar/ShopToolbar";
 
 const ShopPage = () => {
   // dala load
@@ -9,20 +10,20 @@ const ShopPage = () => {
 
   // pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = 16;
   const lastIndex = currentPage * itemsPerPage;
   const firstIndex = lastIndex - itemsPerPage;
   const currentProducts = products.slice(firstIndex, lastIndex);
-  // const pages = [1, 2, 3, 4];
   const totalPages = Math.ceil(products.length / itemsPerPage);
   const pages = [...Array(totalPages).keys()].map((n) => n + 1);
 
-  // console.log(products);
   return (
     <div>
       <DefaultBanner />
+      <ShopToolbar/>
 
-      <div className="lg:container w-full mx-auto lg:py-[60px] md:py-10 py-[30px]">
+      <asset>
+        <div className="lg:container w-full mx-auto lg:py-[60px] md:py-10 py-[30px]">
         <Suspense
           fallback={<span className="loading loading-bars loading-xl"></span>}
         >
@@ -58,6 +59,7 @@ const ShopPage = () => {
           </button>
         </div>
       </div>
+      </asset>
     </div>
   );
 };

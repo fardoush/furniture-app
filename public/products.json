@@ -7,7 +7,15 @@
     "discountPrice": 3500000,
     "discount": "30%",
     "image": "/src/assets/product1.jpg",
-    "tag": "discount"
+    "tag": "discount",
+    "description": "A sleek and ergonomic cafe chair that combines classic aesthetics with modern comfort. Built with high-quality wood and premium upholstery.",
+    "sku": "CH001",
+    "category": "Chairs",
+    "tags": ["Chair", "Cafe", "Stylish"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.5,
+    "reviewCount": 12
   },
   {
     "id": 2,
@@ -15,7 +23,15 @@
     "subtitle": "Stylish cafe chair",
     "price": 2500000,
     "image": "/src/assets/product2.jpg",
-    "tag": ""
+    "tag": "",
+    "description": "Experience weightless comfort with the Leviosa chair. Its minimalist design fits perfectly in any contemporary dining or cafe setting.",
+    "sku": "CH002",
+    "category": "Chairs",
+    "tags": ["Chair", "Minimalist", "Home"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.8,
+    "reviewCount": 8
   },
   {
     "id": 3,
@@ -25,7 +41,15 @@
     "discountPrice": 14000000,
     "discount": "50%",
     "image": "/src/assets/product3.jpg",
-    "tag": "discount"
+    "tag": "discount",
+    "description": "The Lolito is the ultimate statement piece for your living room. A spacious, deep-seated luxury sofa designed for maximum relaxation.",
+    "sku": "SF003",
+    "category": "Sofas",
+    "tags": ["Sofa", "Luxury", "Big"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.9,
+    "reviewCount": 25
   },
   {
     "id": 4,
@@ -33,7 +57,15 @@
     "subtitle": "Outdoor bar table and stool",
     "price": 500000,
     "image": "/src/assets/product4.jpg",
-    "tag": "new"
+    "tag": "new",
+    "description": "Bring the party outside with Respira. This weather-resistant bar set is perfect for garden cocktails and morning coffees alike.",
+    "sku": "TB004",
+    "category": "Outdoor",
+    "tags": ["Table", "Outdoor", "Stool"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.2,
+    "reviewCount": 10
   },
   {
     "id": 5,
@@ -41,7 +73,15 @@
     "subtitle": "Night lamp",
     "price": 1500000,
     "image": "/src/assets/product5.jpg",
-    "tag": ""
+    "tag": "",
+    "description": "Illuminate your nights with the Grifo lamp. Its soft, ambient glow creates a peaceful atmosphere in any bedroom.",
+    "sku": "LP005",
+    "category": "Lamps",
+    "tags": ["Lamp", "Lighting", "Home"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.6,
+    "reviewCount": 15
   },
   {
     "id": 6,
@@ -49,7 +89,15 @@
     "subtitle": "Small mug",
     "price": 150000,
     "image": "/src/assets/product6.jpg",
-    "tag": "new"
+    "tag": "new",
+    "description": "A perfectly weighted ceramic mug for your daily caffeine fix. Minimalist design with a comfortable grip.",
+    "sku": "AC006",
+    "category": "Accessories",
+    "tags": ["Mug", "Kitchen", "New"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.4,
+    "reviewCount": 30
   },
   {
     "id": 7,
@@ -59,7 +107,15 @@
     "discountPrice": 14000000,
     "discount": "50%",
     "image": "/src/assets/product7.jpg",
-    "tag": "discount"
+    "tag": "discount",
+    "description": "Soft, cozy, and vibrant. The Pingky bed set is designed to bring warmth and a pop of color to your bedroom sanctuary.",
+    "sku": "BD007",
+    "category": "Beds",
+    "tags": ["Bed", "Home", "Cozy"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.7,
+    "reviewCount": 18
   },
   {
     "id": 8,
@@ -67,15 +123,31 @@
     "subtitle": "Minimalist flower pot",
     "price": 500000,
     "image": "/src/assets/product8.jpg",
-    "tag": "new"
+    "tag": "new",
+    "description": "Give your plants a stylish home. This ceramic pot features a matte finish and a modern silhouette.",
+    "sku": "AC008",
+    "category": "Decor",
+    "tags": ["Pot", "Garden", "Minimalist"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.3,
+    "reviewCount": 22
   },
   {
     "id": 9,
     "title": "Asgaard sofa",
-    "subtitle": "Comfortable premium sofa",
+    "subtitle": "Premium outdoor sofa set with coffee table",
     "price": 250000,
     "image": "/src/assets/product13.jpg",
-    "tag": ""
+    "tag": "",
+    "description": "A compact, stout-hearted hero with a well-balanced design, featuring durable wooden frames and comfortable navy blue cushions. Perfect for modern living spaces.",
+    "sku": "SS001",
+    "category": "Sofas",
+    "tags": ["Sofa", "Chair", "Home", "Shop"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.5,
+    "reviewCount": 5
   },
   {
     "id": 10,
@@ -83,7 +155,15 @@
     "subtitle": "Modern grey sofa",
     "price": 1200000,
     "image": "/src/assets/product14.jpg",
-    "tag": ""
+    "tag": "",
+    "description": "The Maya Sofa features clean lines and a neutral grey palette, making it a versatile addition to any urban apartment.",
+    "sku": "SF010",
+    "category": "Sofas",
+    "tags": ["Modern", "Sofa", "Grey"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.6,
+    "reviewCount": 9
   },
   {
     "id": 11,
@@ -91,7 +171,15 @@
     "subtitle": "Table and chairs for garden",
     "price": 850000,
     "image": "/src/assets/product11.jpg",
-    "tag": "new"
+    "tag": "new",
+    "description": "An elegant outdoor dining solution. Built to withstand the elements while providing a luxury dining experience in your garden.",
+    "sku": "OD011",
+    "category": "Outdoor",
+    "tags": ["Garden", "Set", "Outdoor"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.4,
+    "reviewCount": 7
   },
   {
     "id": 12,
@@ -101,16 +189,31 @@
     "discount": "10%",
     "discountPrice": 500000,
     "image": "/src/assets/product12.jpg",
-    "tag": "discount"
+    "tag": "discount",
+    "description": "A playful yet sophisticated seat that fits into tight corners while offering premium comfort.",
+    "sku": "SF012",
+    "category": "Sofas",
+    "tags": ["Sofa", "Living", "Stylish"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.1,
+    "reviewCount": 11
   },
-  
   {
     "id": 13,
     "title": "Nordic Chair",
     "subtitle": "Minimal wooden chair",
     "price": 320000,
     "image": "https://images.unsplash.com/photo-1503602642458-232111445657",
-    "tag": ""
+    "tag": "",
+    "description": "Crafted from solid oak, this Nordic-inspired chair brings Scandinavian simplicity and functionality to your dining room.",
+    "sku": "CH013",
+    "category": "Chairs",
+    "tags": ["Nordic", "Wooden", "Chair"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.7,
+    "reviewCount": 19
   },
   {
     "id": 14,
@@ -118,7 +221,15 @@
     "subtitle": "Comfortable 3 seat sofa",
     "price": 950000,
     "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc",
-    "tag": "new"
+    "tag": "new",
+    "description": "A timeless design that never goes out of style. This 3-seater provides ample space and plush cushioning for the whole family.",
+    "sku": "SF014",
+    "category": "Sofas",
+    "tags": ["Classic", "Sofa", "Family"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.8,
+    "reviewCount": 14
   },
   {
     "id": 15,
@@ -126,7 +237,15 @@
     "subtitle": "Solid oak dining table",
     "price": 780000,
     "image": "https://images.unsplash.com/photo-1493666438817-866a91353ca9",
-    "tag": ""
+    "tag": "",
+    "description": "A robust dining table with a natural wood grain finish. Large enough for dinner parties and family gatherings.",
+    "sku": "TB015",
+    "category": "Tables",
+    "tags": ["Table", "Dining", "Wooden"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.5,
+    "reviewCount": 6
   },
   {
     "id": 16,
@@ -134,7 +253,15 @@
     "subtitle": "Decorative bedside lamp",
     "price": 120000,
     "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c",
-    "tag": "new"
+    "tag": "new",
+    "description": "A sleek, metallic lamp that provides focused light for reading while serving as a chic decor piece.",
+    "sku": "LP016",
+    "category": "Lamps",
+    "tags": ["Modern", "Lamp", "Bedside"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.3,
+    "reviewCount": 13
   },
   {
     "id": 17,
@@ -142,7 +269,15 @@
     "subtitle": "King size modern bed",
     "price": 1500000,
     "image": "https://images.unsplash.com/photo-1505693314120-0d443867891c",
-    "tag": ""
+    "tag": "",
+    "description": "Sleep like royalty. This king-size bed frame features a tufted headboard and high-grade fabric finish.",
+    "sku": "BD017",
+    "category": "Beds",
+    "tags": ["Luxury", "Bed", "King Size"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.9,
+    "reviewCount": 21
   },
   {
     "id": 18,
@@ -150,7 +285,15 @@
     "subtitle": "Ergonomic work chair",
     "price": 420000,
     "image": "https://images.unsplash.com/photo-1580480055273-228ff5388ef8",
-    "tag": ""
+    "tag": "",
+    "description": "Engineered for long hours. Features lumbar support, adjustable height, and breathable mesh back.",
+    "sku": "CH018",
+    "category": "Chairs",
+    "tags": ["Office", "Ergonomic", "Work"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.7,
+    "reviewCount": 35
   },
   {
     "id": 19,
@@ -158,7 +301,15 @@
     "subtitle": "Small living room table",
     "price": 260000,
     "image": "https://images.unsplash.com/photo-1533090161767-e6ffed986c88",
-    "tag": "new"
+    "tag": "new",
+    "description": "A compact and sturdy coffee table. Ideal for holding your favorite books and morning brew.",
+    "sku": "TB019",
+    "category": "Tables",
+    "tags": ["Coffee", "Living Room", "Small"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.4,
+    "reviewCount": 4
   },
   {
     "id": 20,
@@ -166,7 +317,15 @@
     "subtitle": "Modern wooden bookshelf",
     "price": 540000,
     "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36",
-    "tag": ""
+    "tag": "",
+    "description": "Organize your collection with style. This open-shelf design provides easy access and a modern display for your home library.",
+    "sku": "ST020",
+    "category": "Furniture",
+    "tags": ["Bookshelf", "Storage", "Modern"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.6,
+    "reviewCount": 17
   },
   {
     "id": 21,
@@ -176,7 +335,15 @@
     "image": "https://images.unsplash.com/photo-1617806118233-18e1de247200",
     "tag": "discount",
     "discount": "15%",
-    "discountPrice": 1400000
+    "discountPrice": 1400000,
+    "description": "A complete dining solution. This set includes a sleek table and four matching chairs, perfect for small families.",
+    "sku": "ST021",
+    "category": "Sets",
+    "tags": ["Dining", "Family", "Set"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.5,
+    "reviewCount": 20
   },
   {
     "id": 22,
@@ -184,7 +351,15 @@
     "subtitle": "Floating wooden shelf",
     "price": 90000,
     "image": "https://images.unsplash.com/photo-1598300056393-4aac492f4344",
-    "tag": ""
+    "tag": "",
+    "description": "Save floor space with this minimalist floating shelf. Perfect for displaying photos or small decor items.",
+    "sku": "ST022",
+    "category": "Furniture",
+    "tags": ["Wall", "Shelf", "Minimalist"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.2,
+    "reviewCount": 8
   },
   {
     "id": 23,
@@ -192,7 +367,15 @@
     "subtitle": "Luxury reclining sofa",
     "price": 1750000,
     "image": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7",
-    "tag": ""
+    "tag": "",
+    "description": "Relax at the touch of a button. This high-end recliner offers multiple positions for ultimate back support.",
+    "sku": "SF023",
+    "category": "Sofas",
+    "tags": ["Recliner", "Sofa", "Luxury"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.9,
+    "reviewCount": 12
   },
   {
     "id": 24,
@@ -200,7 +383,15 @@
     "subtitle": "Compact nightstand",
     "price": 180000,
     "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457",
-    "tag": "new"
+    "tag": "new",
+    "description": "A small yet functional nightstand with a drawer for your essentials. Fits perfectly next to any bed.",
+    "sku": "TB024",
+    "category": "Tables",
+    "tags": ["Bedside", "Table", "Storage"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.4,
+    "reviewCount": 9
   },
   {
     "id": 25,
@@ -208,7 +399,15 @@
     "subtitle": "High wooden bar stool",
     "price": 210000,
     "image": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4",
-    "tag": ""
+    "tag": "",
+    "description": "Elevate your kitchen bar with these sturdy wooden stools. Designed for both durability and comfort.",
+    "sku": "CH025",
+    "category": "Chairs",
+    "tags": ["Bar", "Stool", "Wooden"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.3,
+    "reviewCount": 14
   },
   {
     "id": 26,
@@ -216,7 +415,15 @@
     "subtitle": "Large wooden wardrobe",
     "price": 2200000,
     "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf",
-    "tag": ""
+    "tag": "",
+    "description": "A spacious storage solution for your clothes. Features hanging rods, shelves, and a smooth wooden finish.",
+    "sku": "ST026",
+    "category": "Storage",
+    "tags": ["Wardrobe", "Storage", "Wooden"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.7,
+    "reviewCount": 11
   },
   {
     "id": 27,
@@ -224,7 +431,15 @@
     "subtitle": "Garden lounge chair",
     "price": 330000,
     "image": "https://images.unsplash.com/photo-1600210492493-0946911123ea",
-    "tag": "new"
+    "tag": "new",
+    "description": "Relax under the sun. This lounge chair is UV-resistant and features quick-dry cushions for outdoor use.",
+    "sku": "CH027",
+    "category": "Chairs",
+    "tags": ["Outdoor", "Lounge", "Garden"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.5,
+    "reviewCount": 6
   },
   {
     "id": 28,
@@ -232,7 +447,15 @@
     "subtitle": "Modern media console",
     "price": 640000,
     "image": "https://images.unsplash.com/photo-1588854337115-1c67d9247e4d",
-    "tag": ""
+    "tag": "",
+    "description": "Keep your entertainment area clean and organized. This console offers cable management and extra storage for devices.",
+    "sku": "ST028",
+    "category": "Furniture",
+    "tags": ["TV Cabinet", "Modern", "Living Room"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.6,
+    "reviewCount": 13
   },
   {
     "id": 29,
@@ -242,7 +465,15 @@
     "image": "https://images.unsplash.com/photo-1567016432779-094069958ea5",
     "tag": "discount",
     "discount": "20%",
-    "discountPrice": 2000000
+    "discountPrice": 2000000,
+    "description": "The perfect corner fit. This L-shaped sofa maximizes your seating area without crowding the room.",
+    "sku": "SF029",
+    "category": "Sofas",
+    "tags": ["L-Shape", "Corner", "Sofa"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.8,
+    "reviewCount": 19
   },
   {
     "id": 30,
@@ -250,15 +481,31 @@
     "subtitle": "Modern glass top table",
     "price": 480000,
     "image": "https://images.unsplash.com/photo-1615874959474-d609969a20ed",
-    "tag": ""
+    "tag": "",
+    "description": "A sophisticated glass dining table with tempered safety glass and sleek chrome legs.",
+    "sku": "TB030",
+    "category": "Tables",
+    "tags": ["Glass", "Modern", "Table"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.4,
+    "reviewCount": 7
   },
   {
     "id": 31,
     "title": "Kids Bed",
     "subtitle": "Colorful children bed",
     "price": 730000,
-    "image": "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf",
-    "tag": "new"
+    "image": "/src/assets/product15.jpg",
+    "tag": "new",
+    "description": "Safe and fun. This bed frame is designed with rounded corners and vibrant non-toxic finishes for children.",
+    "sku": "BD031",
+    "category": "Beds",
+    "tags": ["Kids", "Bed", "Colorful"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.7,
+    "reviewCount": 10
   },
   {
     "id": 32,
@@ -266,7 +513,14 @@
     "subtitle": "Soft velvet armchair",
     "price": 390000,
     "image": "https://images.unsplash.com/photo-1519947486511-46149fa0a254",
-    "tag": ""
+    "tag": "",
+    "description": "Indulge in soft velvet. This armchair provides a snug and stylish spot for reading or relaxing with a cup of tea.",
+    "sku": "CH032",
+    "category": "Chairs",
+    "tags": ["Armchair", "Velvet", "Luxury"],
+    "colors": ["#816DFA", "#000000", "#B88E2F"],
+    "sizes": ["L", "XL", "XS"],
+    "rating": 4.9,
+    "reviewCount": 15
   }
-
 ]

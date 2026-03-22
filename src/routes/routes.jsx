@@ -7,6 +7,7 @@ import ProductSection from "../Components/ProductSection/ProductSection.jsx";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage.jsx";
 import ShopPage from "../Pages/ShopPage/ShopPage.jsx";
 import Shops from "../Components/Shops/Shops.jsx";
+import ProductDetails from "../Components/ProductDetails/ProductDetails.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -31,19 +32,19 @@ export const router = createBrowserRouter([
         path: "gallery",
         Component: PhotoGallery,
       },
-    ],
-  },
-  {
-    path: "/shop",
-    Component: MainLayout,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        index: true,
+       {
+        path: "/shop",
          loader: () => fetch("../../public/products.json"),
         Component: ShopPage,
       },
-     
+
+      {
+        path: "/productDetails/:id",
+         loader: () => fetch("../../public/products.json"),
+        // loader: ({params}) => fetch(`../../public/products.json/${params.id}`),
+        Component: ProductDetails
+      }
     ],
   },
+ 
 ]);
