@@ -24,7 +24,7 @@ const ShopPage = () => {
       <ShopToolbar/>
 
       <asset>
-        <div className="lg:container w-full mx-auto lg:py-[60px] md:py-10 py-[30px]">
+        <div className="lg:container w-full mx-auto lg:py-[60px] md:py-10 py-[30px] md:px-10 px-5">
         <Suspense
           fallback={<span className="loading loading-bars loading-xl"></span>}
         >

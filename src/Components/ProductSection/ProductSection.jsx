@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const ProductSection = ({ products }) => {
   return (
-    <div className="lg:container w-full mx-auto lg:py-[100px] md:py-[60px] py-10">
+    <div className="lg:container w-full mx-auto lg:py-[100px] md:py-[60px] py-10   px-5 md:px-10 lg:px-10 ">
       <div className="lg:pb-[60px] md:pb-10 pb-[30px]">
         <h2 className="text-4xl font-bold text-center text-[#333333] pb-4">
           Our Products

@@ -37,7 +37,7 @@ const ProductCard = ({ product }) => {
         </div>
       </div>
       <Link to={`/productDetails/${id}`}>
-        <div className="p-4 md:p-6">
+        <div className="p-4 md:p-5">
           <h3 className="text-[#3A3A3A] font-bold text-[24px] mb-1 group-hover:text-primary transition-colors duration-500">
             {title}
           </h3>
@@ -46,11 +46,11 @@ const ProductCard = ({ product }) => {
           </p>
 
           <div className="flex items-center justify-between">
-            <span className="text-[#3A3A3A] font-bold text-[20px]">
+            <span className="text-[#3A3A3A] font-bold text-sm">
               Rp {price.toLocaleString()}
             </span>
             {discountPrice && (
-              <span className="text-[#B0B0B0] line-through text-[16px]">
+              <span className="text-[#B0B0B0] line-through text-sm">
                 Rp {discountPrice.toLocaleString()}
               </span>
             )}

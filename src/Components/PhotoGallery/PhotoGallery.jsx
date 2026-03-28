@@ -69,14 +69,7 @@ const PhotoGallery = () => {
   return (
     <section className="lg:py-[100px] md:py-[60px] py-10  mx-auto w-full">
       <div className="">
-        <div className="lg:pb-[60px] md:pb-10 pb-[30px] md:px-0 px-5">
-          <h2 className="text-4xl font-bold text-center text-[#333333] pb-4">
-            #FuniroFurniture
-          </h2>
-          <p className="text-base text-center text-[#666666]">
-            Share your setup with
-          </p>
-        </div>
+        c
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-4 auto-rows-[180px]">
           {photoGallery.map((gallery) => (

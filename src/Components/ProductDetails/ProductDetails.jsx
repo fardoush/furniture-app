@@ -5,6 +5,8 @@ import product3 from "../../assets/product13.jpg";
 import { Minus, Plus } from "lucide-react";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { useLoaderData, useParams } from "react-router";
+import TabContent from "../TabContent/TabContent";
+import RelatedProducts from "../RelatedProducts/RelatedProducts";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -203,6 +205,12 @@ colors.map((color, index) => <button key={index} onClick={() => setSelectedColor
             </div>
           </div>
         </div>
+
+        {/* tabs */}
+        <TabContent/>
+
+        {/* Related Products  */}
+        <RelatedProducts products={products}/>
       </div>
     </div>
   );
