@@ -25,7 +25,7 @@ const TabContent = () => {
 
         {/* Description Panel */}
         <TabPanel>
-          <div className="text-center max-w-5xl mx-auto space-y-6">
+          <div className=" max-w-5xl mx-auto space-y-6">
             <p className="text-gray-500 leading-relaxed">
               Embodying the raw, wayward spirit of rock 'n' roll, the Kilburn
               portable active stereo speaker takes the unmistakable look and

@@ -3,7 +3,6 @@ import DefaultBanner from "../../Components/DefaultBanner/DefaultBanner";
 import { useLoaderData } from "react-router";
 import Shops from "../../Components/Shops/Shops";
 import ShopToolbar from "../../Components/ShopToolbar/ShopToolbar";
-import FeatureSection from "../../Components/FeatureSection/FeatureSection";
 
 const ShopPage = () => {
   // dala load
@@ -61,7 +60,6 @@ const ShopPage = () => {
         </div>
       </div>
       </asset>
-      <FeatureSection/>
     </div>
   );
 };

@@ -1,7 +1,13 @@
 import { Headset, ShieldCheck, Trophy, Truck } from "lucide-react";
 import React from "react";
+import { useLocation } from "react-router";
 
 const FeatureSection = () => {
+  const location = useLocation();
+  const isExcludedPage = location.pathname === "/" ||location.pathname === "/shop";
+  if(isExcludedPage){
+    return null;
+  }
   const features = [
     {
       icon: <Trophy size={40} strokeWidth={1.5} />,

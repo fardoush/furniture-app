@@ -4,7 +4,7 @@ import hero from "../../assets/hero_banner.jpg";
 const HeroBanner = () => {
   return (
     <div
-      className="hero relative min-h-screen lg:pr-0 md:pr-8 pr-0 "
+      className="hero relative h-screen w-full flex items-center md:justify-end lg:pr-10 md:pr-8 pr-0 -mt-[100px] pt-[100px]  "
       style={{ backgroundImage: `url(${hero})` }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>

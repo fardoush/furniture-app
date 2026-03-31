@@ -51,7 +51,7 @@ const Header = () => {
     </>
   );
   return (
-    <nav className="sticky top-0 z-[100] w-full bg-white border-b border-gray-100 shadow-sm">
+    <nav className="sticky top-0 left-0 z-[100] w-full bg-white border-b border-gray-100 shadow-sm">
       {/* --- Desktop & Tablet Container --- */}
       <div className="lg:container mx-auto px-6 h-[80px] md:h-[100px] flex items-center justify-between gap-2">
         {/* 1. Logo Section */}
