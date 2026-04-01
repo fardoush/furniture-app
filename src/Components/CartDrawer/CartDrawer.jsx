@@ -13,6 +13,8 @@ const CartDrawer = () => {
     decreaseQty,
   } = useContext(CartContext);
 
+  const total = cartItem.reduce((sum,item) => sum + item.price * item.quantity,0)
+
   return (
     <div
       className={`fixed  top-0 right-0 md:w-[400px]  w-full h-screen z-200 bg-white shadow-xl/30 transform transition-transform duration-300 ${isCartOpen ? "translate-x-0" : "translate-x-full"}`}
@@ -57,7 +59,7 @@ const CartDrawer = () => {
                     <X size={14} />
                   </span>
                   <span className="text-primary md:text-base text-sm">
-                    Rp {cart.price.toLocaleString()}
+                    Rp {(cart.price * cart.quantity).toLocaleString()}
                   </span>
                 </div>
               </div>
@@ -79,7 +81,7 @@ const CartDrawer = () => {
       <div className="">
         <div className="flex items-center justify-between px-4">
           <span className="">Subtitle</span>
-          <h6 className="text-primary text-xl">Rs.9090890</h6>
+          <h6 className="text-primary text-xl">Rs.{total}</h6>
         </div>
         <div className="divider"></div>
         <div className="flex items-center justify-center gap-3  py-4 px-6">
