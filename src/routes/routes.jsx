@@ -9,6 +9,7 @@ import ShopPage from "../Pages/ShopPage/ShopPage.jsx";
 import Shops from "../Components/Shops/Shops.jsx";
 import ProductDetails from "../Components/ProductDetails/ProductDetails.jsx";
 import Contact from "../Pages/Contact/Contact.jsx";
+import Cart from "../Pages/Cart/Cart.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +45,12 @@ export const router = createBrowserRouter([
          loader: () => fetch("../../public/products.json"),
         // loader: ({params}) => fetch(`../../public/products.json/${params.id}`),
         Component: ProductDetails
+      },
+      {
+        path: "/cart",
+         loader: () => fetch("../../public/products.json"),
+        // loader: ({params}) => fetch(`../../public/products.json/${params.id}`),
+        Component: Cart
       },
       {
         path: "/contact",
