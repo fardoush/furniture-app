@@ -14,12 +14,36 @@ const CartProvider = ({children}) => {
 
     }
 
+    const increaseQty = (id) => {
+  const updated = cartItem.map(item =>
+    item.id === id
+      ? { ...item, quantity: item.quantity + 1 }
+      : item
+  );
+  setCartItems(updated);
+};
+
+const decreaseQty = (id) => {
+  const updated = cartItem
+    .map(item =>
+      item.id === id
+        ? { ...item, quantity: item.quantity - 1 }
+        : item
+    )
+    .filter(item => item.quantity > 0);
+
+  setCartItems(updated);
+};
+
     const value = {
         cartItem,
         setCartItems,
         isCartOpen,
         setIsCartOpen,
-        handleRemoveFormCart
+        handleRemoveFormCart,
+        increaseQty,
+        decreaseQty
+
     }
 
     return (

@@ -4,12 +4,18 @@ import { CartContext } from "../../Provider/CartProvider";
 import { ToastContainer } from "react-toastify";
 
 const CartDrawer = () => {
-  const { isCartOpen, setIsCartOpen, cartItem, handleRemoveFormCart } =
-    useContext(CartContext);
+  const {
+    isCartOpen,
+    setIsCartOpen,
+    cartItem,
+    handleRemoveFormCart,
+    increaseQty,
+    decreaseQty,
+  } = useContext(CartContext);
 
   return (
     <div
-      className={`fixed  top-0 right-0 lg:w-[400px] md:w-[350px] w-full h-screen z-200 bg-white shadow-xl/30 transform transition-transform duration-300 ${isCartOpen ? "translate-x-0" : "translate-x-full"}`}
+      className={`fixed  top-0 right-0 md:w-[400px]  w-full h-screen z-200 bg-white shadow-xl/30 transform transition-transform duration-300 ${isCartOpen ? "translate-x-0" : "translate-x-full"}`}
     >
       <div className="flex justify-between items-center p-4 border-b border-gray-300">
         <h2 className="text-lg font-semibold">Shopping Cart</h2>
@@ -26,23 +32,46 @@ const CartDrawer = () => {
           >
             <div className="flex items-center gap-4">
               <img src={cart.image} alt="" className="w-16 h-16 object-cover" />
-              <div>
+              <div className=" flex flex-col md:gap-2 gap-1">
                 <h4 className="text-lg font-semibold ">{cart.title}</h4>
-                <div className="flex items-center gap-3">
-                  <span>1</span>
+                <div className="flex items-center md:gap-3 gap-1">
+                  {/* <span>{cart.quantity}</span> */}
+                   <div className="flex items-center md:gap-2 gap-1 border border-gray-400 rounded-2xl">
+                <button
+                  onClick={() => decreaseQty(cart.id)}
+                  className="md:px-2 px-[8px]"
+                >
+                  -
+                </button>
+
+                <span>{cart.quantity}</span>
+
+                <button
+                  onClick={() => increaseQty(cart.id)}
+                  className="md:px-2 px-1"
+                >
+                  +
+                </button>
+              </div>
                   <span>
                     <X size={14} />
                   </span>
-                  <span className="text-primary">
+                  <span className="text-primary md:text-base text-sm">
                     Rp {cart.price.toLocaleString()}
                   </span>
                 </div>
               </div>
             </div>
 
-            <button onClick={() => handleRemoveFormCart(cart.id)} className="">
-              <Trash2 className="text-red-600" />
-            </button>
+            <div className="flex flex-col">
+             
+              <button
+                onClick={() => handleRemoveFormCart(cart.id)}
+                className=""
+              >
+                <Trash2 className="text-red-600 md:w-6 md:h-6 w-4 h-4" />
+              </button>
+            </div>
           </div>
         ))}
       </div>
