@@ -5,7 +5,6 @@ import { NavLink } from "react-router";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navItems = ["Home", "Shop", "About", "Contact"];
   const link = (
     <>
       <NavLink
@@ -140,17 +139,10 @@ const Header = () => {
         }`}
       >
         <div className="flex flex-col h-full px-8 py-10 justify-between">
-          <ul className="space-y-6">
-            {navItems.map((item) => (
-              <li key={item}>
-                <a
-                  onClick={() => setIsOpen(false)}
-                  className="block py-4 text-3xl font-bold text-black border-b border-gray-50 active:text-[#B88E2F] transition-colors"
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
+          <ul className="space-y-6 flex flex-col">
+
+             {link}
+         
           </ul>
 
           {/* Mobile Bottom Info */}

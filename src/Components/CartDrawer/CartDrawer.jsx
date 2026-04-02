@@ -85,14 +85,14 @@ const CartDrawer = () => {
           <h6 className="text-primary text-xl">Rs.{total}</h6>
         </div>
         <div className="divider"></div>
-        <div className="flex items-center justify-center gap-3  py-4 px-6">
-          <Link to="/cart" className="btn btn-outline rounded-full px-6">Cart</Link>
-          <button className="btn btn-outline rounded-full px-6">
+        <div className="flex items-center justify-center md:gap-3 gap-2  py-4 md:px-6">
+          <Link to="/cart" className="btn btn-outline rounded-full md:px-6 px-4">Cart</Link>
+          <Link to="/checkout" className="btn btn-outline rounded-full  md:px-6 px-4">
             Checkout
-          </button>
-          <button className="btn btn-outline rounded-full px-6">
+          </Link>
+          <Link className="btn btn-outline rounded-full  md:px-6 px-4">
             Comparison
-          </button>
+          </Link>
         </div>
       </div>
       <ToastContainer />
