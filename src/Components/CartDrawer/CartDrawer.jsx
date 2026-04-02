@@ -2,6 +2,7 @@ import { MessageSquareX, Trash2, X } from "lucide-react";
 import React, { useContext } from "react";
 import { CartContext } from "../../Provider/CartProvider";
 import { ToastContainer } from "react-toastify";
+import { Link } from "react-router";
 
 const CartDrawer = () => {
   const {
@@ -85,7 +86,7 @@ const CartDrawer = () => {
         </div>
         <div className="divider"></div>
         <div className="flex items-center justify-center gap-3  py-4 px-6">
-          <button className="btn btn-outline rounded-full px-6">Cart</button>
+          <Link to="/cart" className="btn btn-outline rounded-full px-6">Cart</Link>
           <button className="btn btn-outline rounded-full px-6">
             Checkout
           </button>

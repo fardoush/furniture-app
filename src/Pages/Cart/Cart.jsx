@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdDelete } from "react-icons/md";
 import DefaultBanner from "../../Components/DefaultBanner/DefaultBanner";
+import { CartContext } from "../../Provider/CartProvider";
 
 const Cart = () => {
+  const {cartItem,handleRemoveFormCart} = useContext(CartContext);
+
+  const total = cartItem.reduce((sum, items) => sum + items.price * items.quantity,0);
+
+  const subtotal = total;
+  const shipping = 0;
+  const finalTotal = subtotal + shipping;
+  
   return (
     <div className="">
         <DefaultBanner/>
         <div className="lg:container w-full mx-auto lg:py-20 md:py-12 py-10 md:px-8 px-5">
-      <div className="flex lg:flex-row flex-col justify-between gap-5">
-        <div className="overflow-x-auto ">
-          <table className="table">
+      <div className="flex lg:flex-row flex-col justify-center gap-5 lg:gap-10">
+        <div className=" w-full lg:w-2/3 overflow-x-auto ">
+          <table className="table w-full">
             {/* head */}
             <thead className="bg-[#F9F1E7] text-black capitalize">
               <tr>
@@ -23,26 +32,41 @@ const Cart = () => {
             </thead>
             <tbody>
               {/* row 1 */}
-              <tr className="hover:bg-[#FDF9F6]">
-                <th>
-                  {" "}
-                  <img
-                    src="https://ibb.co.com/99M0zdb3"
-                    alt=""
-                    className="object-cover w-16 h-16 rounded-lg"
-                  />
-                </th>
-                <td>Cy Ganderton</td>
-                <td>Quality Control Specialist</td>
-                <td>Blue</td>
-                <td>Blue</td>
+              {
+                cartItem.length > 0 ? (
+                  cartItem.map((cart) => (
+                  <tr className="hover:bg-[#FDF9F6]" key={cart.id}>
+                <td className="">
+                 <div className="bg-[#F9F1E7] rounded-lg w-16 h-16 flex items-center justify-center shrink-0">
+    <img
+      src={cart.image}
+      alt={cart.title}
+      className="object-cover w-full h-full rounded-md"
+    />
+  </div>
+                </td>
+                <td>{cart.title}</td>
+                <td>{cart.price}</td>
+                <td>{cart.quantity}</td>
+                <td>Rp.{(cart.price * cart.quantity)}</td>
                 <td>
-                  <MdDelete className="text-primary w-6 h-6" />
+                  <MdDelete  onClick={() => handleRemoveFormCart(cart.id)} className="text-primary w-6 h-6" />
                 </td>
               </tr>
+                )) 
+                ) : (
+                  <tr>
+        <td colSpan="6" className="text-center py-10 text-2xl">
+          Cart is empty 😢
+        </td>
+      </tr>
+                )
+              }
             </tbody>
           </table>
         </div>
+
+
         {/* Total  */}
         <div className="card lg:w-96 w-full bg-[#F9F1E7] card-md rounded-none py-6">
           <div className="card-body flex flex-col justify-center items-center">
@@ -53,7 +77,7 @@ const Cart = () => {
           <div className="flex items-center gap-4">
             <span className="w-1/3 font-semibold text-black ">Subtotal</span>
             <div className="w-4/3 flex justify-end">
-                <span className="text-gray-400 text-[#9F9F9F]">Rs. 250,000.00</span>
+                <span className="text-gray-400 text-[#9F9F9F]">Rs. {subtotal}</span>
             </div>
           </div>
 
@@ -62,7 +86,7 @@ const Cart = () => {
             <span className="w-1/3 font-semibold text-black ">Total</span>
              <div className="w-4/3 flex justify-end">
                 <span className=" font-semibold text-primary text-base">
-                 Rs. 250,000.000
+                 Rs. {finalTotal}
                 </span>
              </div>
           </div>
