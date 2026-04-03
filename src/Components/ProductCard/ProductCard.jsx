@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router";
 import { CartContext } from "../../Provider/CartProvider";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, view }) => {
   const { id, image, tag, discount, title, subtitle, price, discountPrice } =
     product;
   const { cartItem, setCartItems, setIsCartOpen } = useContext(CartContext);
@@ -26,6 +26,52 @@ const ProductCard = ({ product }) => {
     setIsCartOpen(true);
 
   };
+   if (view === "list") {
+    return (
+      <div className="flex flex-col md:flex-row gap-4 bg-[#F4F5F7] p-4 rounded-lg group">
+        <div className="relative md:w-64 w-full h-48 overflow-hidden rounded-lg">
+          <img src={image} className="w-full h-full object-cover" />
+
+          {tag && (
+            <div
+              className={`absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center text-white text-sm ${
+                tag === "new" ? "bg-[#2EC1AC]" : "bg-[#E97171]"
+              }`}
+            >
+              {tag === "new" ? "New" : `-${discount}`}
+            </div>
+          )}
+        </div>
+
+        <div className="flex flex-col justify-between flex-1">
+          <div>
+            <h3 className="text-[#3A3A3A] font-bold text-lg">{title}</h3>
+            <p className="text-[#898989] text-sm">{subtitle}</p>
+          </div>
+
+          <div className="flex items-center justify-between mt-3">
+            <div>
+              <span className="font-bold">
+                Rp {price.toLocaleString()}
+              </span>
+              {discountPrice && (
+                <span className="line-through ml-2 text-sm text-gray-400">
+                  Rp {discountPrice.toLocaleString()}
+                </span>
+              )}
+            </div>
+
+            <button
+              onClick={handleAddToCart}
+              className="bg-[#B88E2F] text-white px-4 py-2 rounded"
+            >
+              Add to cart
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="group relative bg-[#F4F5F7] transition-all duration-300">
       <div className="relative overflow-hidden">

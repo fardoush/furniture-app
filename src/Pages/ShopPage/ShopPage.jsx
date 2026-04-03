@@ -7,6 +7,8 @@ import ShopToolbar from "../../Components/ShopToolbar/ShopToolbar";
 const ShopPage = () => {
   // dala load
   const products = useLoaderData();
+  // grid/list 
+  const[view, setView] = useState("grid");
 
   // sort price product 
 const [sort, setSort] = useState("");
@@ -21,26 +23,27 @@ const sortedProducts = [...products].sort((a,b) => {
   return 0;
 })
 // show items per page 
+const[showLimited, setShowLimited] = useState(16);
   // pagination
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 16;
+  const itemsPerPage = showLimited;
   const lastIndex = currentPage * itemsPerPage;
   const firstIndex = lastIndex - itemsPerPage;
   const currentProducts = sortedProducts.slice(firstIndex, lastIndex);
-  const totalPages = Math.ceil(products.length / itemsPerPage);
+  const totalPages = Math.ceil(sortedProducts.length / itemsPerPage);
   const pages = [...Array(totalPages).keys()].map((n) => n + 1);
 
   return (
     <div>
       <DefaultBanner />
-      <ShopToolbar setSort={setSort}/>
+      <ShopToolbar setSort={setSort} setShowLimited={setShowLimited} view={view} setView={setView}/>
 
       <asset>
         <div className="lg:container w-full mx-auto lg:py-[60px] md:py-10 py-[30px] md:px-10 px-5">
         <Suspense
           fallback={<span className="loading loading-bars loading-xl"></span>}
         >
-          <Shops products={currentProducts} />
+          <Shops products={currentProducts} view={view} />
         </Suspense>
 
         {/* pagination  */}
