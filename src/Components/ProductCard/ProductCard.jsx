@@ -24,6 +24,7 @@ const ProductCard = ({ product }) => {
     // const newProduct = {...product, quantity:1};
     // setCartItems([...cartItem, product]);
     setIsCartOpen(true);
+
   };
   return (
     <div className="group relative bg-[#F4F5F7] transition-all duration-300">

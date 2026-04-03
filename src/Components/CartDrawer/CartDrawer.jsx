@@ -14,7 +14,18 @@ const CartDrawer = () => {
     decreaseQty,
   } = useContext(CartContext);
 
-  const total = cartItem.reduce((sum,item) => sum + item.price * item.quantity,0)
+  // const total = cartItem.reduce((sum,item) => sum + item.price * item.quantity,0)
+
+const total = cartItem.reduce(
+  (sum, item) => sum + (item?.price || 0) * (item?.quantity || 0),
+  0
+);
+
+// const cleanCart = cartItem.filter(item => item && item.price);
+// const total = cleanCart.reduce(
+//   (sum, item) => sum + item.price * item.quantity,
+//   0
+// );
 
   return (
     <div
@@ -60,7 +71,7 @@ const CartDrawer = () => {
                     <X size={14} />
                   </span>
                   <span className="text-primary md:text-base text-sm">
-                    Rp {(cart.price * cart.quantity).toLocaleString()}
+                   Rp {((cart?.price || 0) * (cart?.quantity || 0)).toLocaleString()}
                   </span>
                 </div>
               </div>

@@ -47,6 +47,16 @@ const Header = () => {
         Contact
         <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#B88E2F] transition-all duration-300 group-hover:w-full"></span>
       </NavLink>
+      <NavLink
+        to="/blog"
+        className={({ isActive }) =>
+          `text-[16px] font-medium transition-all duration-300 relative group py-2 
+          ${isActive ? "text-[#B88E2F]" : "text-black hover:text-[#B88E2F]"}`
+        }
+      >
+        Blog
+        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#B88E2F] transition-all duration-300 group-hover:w-full"></span>
+      </NavLink>
     </>
   );
   return (

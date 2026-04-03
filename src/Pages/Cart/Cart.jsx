@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { MdDelete } from "react-icons/md";
 import DefaultBanner from "../../Components/DefaultBanner/DefaultBanner";
 import { CartContext } from "../../Provider/CartProvider";
+import { Link } from "react-router";
 
 const Cart = () => {
   const {cartItem,handleRemoveFormCart} = useContext(CartContext);
@@ -93,7 +94,7 @@ const Cart = () => {
         </div>
 
             <div className="justify-end card-actions mt-6">
-              <button className="btn btn-primary shadow-none border-none">Check Out</button>
+              <Link to="/checkout" className="btn btn-primary shadow-none border-none">Check Out</Link>
             </div>
           </div>
         </div>

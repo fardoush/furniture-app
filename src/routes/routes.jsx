@@ -11,6 +11,7 @@ import ProductDetails from "../Components/ProductDetails/ProductDetails.jsx";
 import Contact from "../Pages/Contact/Contact.jsx";
 import Cart from "../Pages/Cart/Cart.jsx";
 import Checkout from "../Pages/Checkout/Checkout.jsx";
+import Blog from "../Pages/Blog/Blog.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -58,6 +59,10 @@ export const router = createBrowserRouter([
       {
         path: "/contact",
         Component: Contact
+      },
+      {
+        path: "/blog",
+        Component: Blog
       }
     ],
   },

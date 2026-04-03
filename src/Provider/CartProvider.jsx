@@ -1,12 +1,16 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
+import { getStoredCart, saveCart } from '../utilities/AdToDB';
 
  export const CartContext = createContext();
 
 const CartProvider = ({children}) => {
-    const [cartItem, setCartItems] = useState([]);
+    const [cartItem, setCartItems] = useState(() => getStoredCart());
 
     const [isCartOpen, setIsCartOpen] = useState(false);
+    useEffect(() => {
+      saveCart(cartItem);
+    }, [cartItem])
 
     const handleRemoveFormCart = (id) => {
         setCartItems(cartItem.filter(cart => cart.id !== id));
