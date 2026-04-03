@@ -8,19 +8,32 @@ const ShopPage = () => {
   // dala load
   const products = useLoaderData();
 
+  // sort price product 
+const [sort, setSort] = useState("");
+
+const sortedProducts = [...products].sort((a,b) => {
+  if(sort === "low"){
+    return a.price - b.price;
+  }
+  if(sort === "high"){
+    return b.price - a.price;
+  }
+  return 0;
+})
+// show items per page 
   // pagination
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 16;
   const lastIndex = currentPage * itemsPerPage;
   const firstIndex = lastIndex - itemsPerPage;
-  const currentProducts = products.slice(firstIndex, lastIndex);
+  const currentProducts = sortedProducts.slice(firstIndex, lastIndex);
   const totalPages = Math.ceil(products.length / itemsPerPage);
   const pages = [...Array(totalPages).keys()].map((n) => n + 1);
 
   return (
     <div>
       <DefaultBanner />
-      <ShopToolbar/>
+      <ShopToolbar setSort={setSort}/>
 
       <asset>
         <div className="lg:container w-full mx-auto lg:py-[60px] md:py-10 py-[30px] md:px-10 px-5">

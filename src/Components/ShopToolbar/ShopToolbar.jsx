@@ -1,7 +1,8 @@
 import { LayoutGrid, LayoutList, SlidersHorizontal } from "lucide-react";
 import React from "react";
 
-const ShopToolbar = () => {
+const ShopToolbar = ({setSort}) => {
+
   return (
     <section className="bg-[#F9F1E7] px-4 py-6">
       <div className="max-w-7xl mx-auto flex flex-col gap-6 md:flex-row md:justify-between md:items-center">
@@ -49,10 +50,9 @@ const ShopToolbar = () => {
             <span className="text-[14px] lg:text-[16px] md:text-[13px] whitespace-nowrap">
               Sort by
             </span>
-            <select className="px-2 md:px-5 py-2.5 bg-white border-none rounded-[2px] outline-none focus:ring-1 focus:ring-[#B88E2F] text-gray-400 text-sm cursor-pointer transition-all">
-              <option>Default</option>
-              <option>Price: Low to High</option>
-              <option>Price: High to Low</option>
+            <select onChange={(e) => setSort(e.target.value)} className="px-2 md:px-5 py-2.5 bg-white border-none rounded-[2px] outline-none focus:ring-1 focus:ring-[#B88E2F] text-gray-400 text-sm cursor-pointer transition-all">
+              <option value="low">Price: Low to High</option>
+              <option value="high">Price: High to Low</option>
             </select>
           </div>
         </div>
