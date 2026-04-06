@@ -1,10 +1,12 @@
 import { Heart, Search, ShoppingCart, UserRound, Menu, X } from "lucide-react";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router";
+import { CartContext } from "../../Provider/CartProvider";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const{ cartItem, wishlist} = useContext(CartContext);
   const link = (
     <>
       <NavLink
@@ -100,12 +102,17 @@ const Header = () => {
           </button>
           <button
             title="Wishlist"
-            className="hover:text-[#B88E2F] transition-colors"
+            className="hover:text-[#B88E2F] transition-colors relative"
           >
             <Heart
               strokeWidth={1.5}
               className="w-5 h-5 md:w-6 md:h-6 lg:w-[28px] lg:h-[28px]"
             />
+            {wishlist.length > 0 && (
+          <span className="absolute -top-1 -right-2 bg-[#B88E2F] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+            {wishlist.length}
+          </span>
+        )}
           </button>
           <button
             title="Cart"
@@ -115,9 +122,13 @@ const Header = () => {
               strokeWidth={1.5}
               className="w-5 h-5 md:w-6 md:h-6 lg:w-[28px] lg:h-[28px]"
             />
-            <span className="absolute -top-1 -right-2 bg-[#B88E2F] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
-              3
+            {
+              cartItem.length > 0 && (
+                <span className="absolute -top-1 -right-2 bg-[#B88E2F] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+              {cartItem.reduce((sum,item) => sum + item.quantity,0)}
             </span>
+              )
+            }
           </button>
 
           <button

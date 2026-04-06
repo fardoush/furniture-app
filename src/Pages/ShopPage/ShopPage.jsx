@@ -9,11 +9,23 @@ const ShopPage = () => {
   const products = useLoaderData();
   // grid/list 
   const[view, setView] = useState("grid");
+  // filter 
+  const[filter, setFilter] = useState("all");
+  const[categoryfilter, setCategoryFilter] = useState("all");
+  const filterProducts = products.filter(product => {
+   if(filter === "cheap" && product.price >= 150000) return false;
+   if(filter === "expensive" && product.price < 150000) return false;
+
+   if(categoryfilter !== "all" && product.category !== categoryfilter) return false;
+
+   return true;
+
+  })
 
   // sort price product 
 const [sort, setSort] = useState("");
 
-const sortedProducts = [...products].sort((a,b) => {
+const sortedProducts = [...filterProducts].sort((a,b) => {
   if(sort === "low"){
     return a.price - b.price;
   }
@@ -32,11 +44,15 @@ const[showLimited, setShowLimited] = useState(16);
   const currentProducts = sortedProducts.slice(firstIndex, lastIndex);
   const totalPages = Math.ceil(sortedProducts.length / itemsPerPage);
   const pages = [...Array(totalPages).keys()].map((n) => n + 1);
+  // add showing page 
+  const start = firstIndex + 1;
+  const end = Math.min(lastIndex, sortedProducts.length);
+  const total = sortedProducts.length;
 
   return (
     <div>
       <DefaultBanner />
-      <ShopToolbar setSort={setSort} setShowLimited={setShowLimited} view={view} setView={setView}/>
+      <ShopToolbar setSort={setSort} setShowLimited={setShowLimited} view={view} setView={setView} start={start} end={end} total={total} setFilter={setFilter} setCategoryFilter={setCategoryFilter}/>
 
       <asset>
         <div className="lg:container w-full mx-auto lg:py-[60px] md:py-10 py-[30px] md:px-10 px-5">
@@ -55,7 +71,7 @@ const[showLimited, setShowLimited] = useState(16);
           {pages.map((page) => (
             <button
             disabled = {currentPage === totalPages}
-              onClick={() => setCurrentPage(currentPage + 1)}
+              onClick={() => setCurrentPage(page)}
               key={page}
               className={`w-12 h-12 rounded-lg  transition-all duration-300
                 ${

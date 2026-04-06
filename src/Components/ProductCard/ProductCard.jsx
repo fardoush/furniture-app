@@ -2,11 +2,12 @@ import { ArrowRightLeft, Heart, Share2 } from "lucide-react";
 import React, { useContext } from "react";
 import { Link } from "react-router";
 import { CartContext } from "../../Provider/CartProvider";
+import { toast } from "react-toastify";
 
 const ProductCard = ({ product, view }) => {
   const { id, image, tag, discount, title, subtitle, price, discountPrice } =
     product;
-  const { cartItem, setCartItems, setIsCartOpen } = useContext(CartContext);
+  const { cartItem, setCartItems, setIsCartOpen,handleAddToWishlist } = useContext(CartContext);
 
   const handleAddToCart = () => {
     const existingProduct = cartItem.find((item) => item.id === product.id);
@@ -24,6 +25,7 @@ const ProductCard = ({ product, view }) => {
     // const newProduct = {...product, quantity:1};
     // setCartItems([...cartItem, product]);
     setIsCartOpen(true);
+    toast.success("Added to cart item!")
 
   };
    if (view === "list") {
@@ -99,10 +101,10 @@ const ProductCard = ({ product, view }) => {
               <ArrowRightLeft />
               Compare
             </span>
-            <span className="flex items-center gap-1 cursor-pointer hover:text-[#B88E2F] duration-500">
+            <button onClick={() => handleAddToWishlist(product)} className="flex items-center gap-1 cursor-pointer hover:text-[#B88E2F] duration-500">
               <Heart />
               Like
-            </span>
+            </button>
           </div>
         </div>
       </div>

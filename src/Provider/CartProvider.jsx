@@ -6,7 +6,7 @@ import { getStoredCart, saveCart } from '../utilities/AdToDB';
 
 const CartProvider = ({children}) => {
     const [cartItem, setCartItems] = useState(() => getStoredCart());
-
+const[wishlist, setWishlist] = useState([]);
     const [isCartOpen, setIsCartOpen] = useState(false);
     useEffect(() => {
       saveCart(cartItem);
@@ -39,6 +39,18 @@ const decreaseQty = (id) => {
   setCartItems(updated);
 };
 
+// wishlist functionality 
+
+const handleAddToWishlist = (product) => {
+  const exist = wishlist.find(item => item.id === product.id);
+  if(!exist){
+    setWishlist([...wishlist, product]);
+    toast.success("Added to wishlist!")
+  }
+}
+
+
+
     const value = {
         cartItem,
         setCartItems,
@@ -46,7 +58,10 @@ const decreaseQty = (id) => {
         setIsCartOpen,
         handleRemoveFormCart,
         increaseQty,
-        decreaseQty
+        decreaseQty,
+        wishlist,
+        setWishlist,
+        handleAddToWishlist
 
     }
 
