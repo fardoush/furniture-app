@@ -64,6 +64,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/blog",
+        loader: () => fetch("../../public/products.json"),
         Component: Blog
       },
       {

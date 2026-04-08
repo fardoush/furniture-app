@@ -8,14 +8,19 @@
     "discount": "30%",
     "image": "/src/assets/product1.jpg",
     "tag": "discount",
-    "description": "A sleek and ergonomic cafe chair that combines classic aesthetics with modern comfort. Built with high-quality wood and premium upholstery.",
+    "description": "A sleek and ergonomic cafe chair that combines classic aesthetics with modern comfort. Built with high-quality wood and premium upholstery. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum.",
     "sku": "CH001",
     "category": "Chairs",
     "tags": ["Chair", "Cafe", "Stylish"],
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.5,
-    "reviewCount": 12
+    "reviewCount": 12,
+    "author": "Admin",
+    "date": "14 Oct 2022",
+    "blogCategory": "Wood",
+    "excerpt": "Going all-in with millennial design trends.",
+    "isBlog": true
   },
   {
     "id": 2,
@@ -31,7 +36,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.8,
-    "reviewCount": 8
+    "reviewCount": 8,
+    "author": "Admin",
+    "date": "03 Aug 2022",
+    "blogCategory": "Design",
+    "excerpt": "Exploring minimalist furniture design.",
+    "isBlog": true
   },
   {
     "id": 3,
@@ -49,7 +59,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.9,
-    "reviewCount": 25
+    "reviewCount": 25,
+    "author": "Admin",
+    "date": "03 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Luxury sofas that elevate living rooms.",
+    "isBlog": true
   },
   {
     "id": 4,
@@ -65,7 +80,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.2,
-    "reviewCount": 10
+    "reviewCount": 10,
+    "author": "Admin",
+    "date": "05 Aug 2022",
+    "blogCategory": "Crafts",
+    "excerpt": "Outdoor furniture trends for gardens.",
+    "isBlog": true
   },
   {
     "id": 5,
@@ -81,7 +101,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.6,
-    "reviewCount": 15
+    "reviewCount": 15,
+    "author": "Admin",
+    "date": "06 Aug 2022",
+    "blogCategory": "Design",
+    "excerpt": "Lighting ideas for cozy homes.",
+    "isBlog": true
   },
   {
     "id": 6,
@@ -97,7 +122,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.4,
-    "reviewCount": 30
+    "reviewCount": 30,
+    "author": "Admin",
+    "date": "07 Aug 2022",
+    "blogCategory": "Handmade",
+    "excerpt": "Minimal mugs for modern kitchens.",
+    "isBlog": true
   },
   {
     "id": 7,
@@ -115,7 +145,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.7,
-    "reviewCount": 18
+    "reviewCount": 18,
+    "author": "Admin",
+    "date": "08 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Colorful bedroom inspirations.",
+    "isBlog": true
   },
   {
     "id": 8,
@@ -131,7 +166,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.3,
-    "reviewCount": 22
+    "reviewCount": 22,
+    "author": "Admin",
+    "date": "09 Aug 2022",
+    "blogCategory": "Crafts",
+    "excerpt": "Decorating with modern plant pots.",
+    "isBlog": true
   },
   {
     "id": 9,
@@ -147,7 +187,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.5,
-    "reviewCount": 5
+    "reviewCount": 5,
+     "author": "Admin",
+    "date": "10 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Outdoor sofa ideas for small spaces.",
+    "isBlog": true
   },
   {
     "id": 10,
@@ -163,7 +208,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.6,
-    "reviewCount": 9
+    "reviewCount": 9,
+    "author": "Admin",
+    "date": "11 Aug 2022",
+    "blogCategory": "Design",
+    "excerpt": "Modern grey sofas for apartments.",
+    "isBlog": true
   },
   {
     "id": 11,
@@ -179,7 +229,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.4,
-    "reviewCount": 7
+    "reviewCount": 7,
+    "author": "Admin",
+    "date": "12 Aug 2022",
+    "blogCategory": "Crafts",
+    "excerpt": "Garden dining inspiration.",
+    "isBlog": true
   },
   {
     "id": 12,
@@ -197,7 +252,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.1,
-    "reviewCount": 11
+    "reviewCount": 11,
+     "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 13,
@@ -213,7 +273,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.7,
-    "reviewCount": 19
+    "reviewCount": 19,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 14,
@@ -229,7 +294,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.8,
-    "reviewCount": 14
+    "reviewCount": 14,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 15,
@@ -245,7 +315,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.5,
-    "reviewCount": 6
+    "reviewCount": 6,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 16,
@@ -261,7 +336,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.3,
-    "reviewCount": 13
+    "reviewCount": 13,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 17,
@@ -277,7 +357,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.9,
-    "reviewCount": 21
+    "reviewCount": 21,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 18,
@@ -293,7 +378,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.7,
-    "reviewCount": 35
+    "reviewCount": 35,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 19,
@@ -309,7 +399,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.4,
-    "reviewCount": 4
+    "reviewCount": 4,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 20,
@@ -318,14 +413,19 @@
     "price": 540000,
     "image": "https://images.unsplash.com/photo-1524758631624-e2822e304c36",
     "tag": "",
-    "description": "Organize your collection with style. This open-shelf design provides easy access and a modern display for your home library.",
+    "description": "Organize your collection with style. This open-shelf design provides easy access and a modern display for your home library. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet. Libero enim sed faucibus turpis in. Cursus mattis molestie a iaculis at erat. Nibh cras pulvinar mattis nunc sed blandit libero. Pellentesque elit ullamcorper dignissim cras tincidunt. Pharetra et ultrices neque ornare aenean euismod elementum.",
     "sku": "ST020",
     "category": "Furniture",
     "tags": ["Bookshelf", "Storage", "Modern"],
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.6,
-    "reviewCount": 17
+    "reviewCount": 17,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 21,
@@ -343,7 +443,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.5,
-    "reviewCount": 20
+    "reviewCount": 20,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 22,
@@ -359,7 +464,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.2,
-    "reviewCount": 8
+    "reviewCount": 8,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 23,
@@ -375,7 +485,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.9,
-    "reviewCount": 12
+    "reviewCount": 12,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 24,
@@ -391,7 +506,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.4,
-    "reviewCount": 9
+    "reviewCount": 9,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 25,
@@ -407,7 +527,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.3,
-    "reviewCount": 14
+    "reviewCount": 14,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 26,
@@ -423,7 +548,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.7,
-    "reviewCount": 11
+    "reviewCount": 11,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 27,
@@ -439,7 +569,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.5,
-    "reviewCount": 6
+    "reviewCount": 6,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 28,
@@ -455,7 +590,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.6,
-    "reviewCount": 13
+    "reviewCount": 13,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 29,
@@ -473,7 +613,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.8,
-    "reviewCount": 19
+    "reviewCount": 19,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 30,
@@ -489,7 +634,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.4,
-    "reviewCount": 7
+    "reviewCount": 7,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 31,
@@ -505,7 +655,12 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.7,
-    "reviewCount": 10
+    "reviewCount": 10,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   },
   {
     "id": 32,
@@ -521,6 +676,11 @@
     "colors": ["#816DFA", "#000000", "#B88E2F"],
     "sizes": ["L", "XL", "XS"],
     "rating": 4.9,
-    "reviewCount": 15
+    "reviewCount": 15,
+    "author": "Admin",
+    "date": "13 Aug 2022",
+    "blogCategory": "Interior",
+    "excerpt": "Small sofa solutions.",
+    "isBlog": true
   }
 ]
