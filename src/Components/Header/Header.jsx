@@ -1,12 +1,18 @@
 import { Heart, Search, ShoppingCart, UserRound, Menu, X } from "lucide-react";
 import React, { useContext, useState } from "react";
 import logo from "../../assets/logo.svg";
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 import { CartContext } from "../../Provider/CartProvider";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const{ cartItem, wishlist} = useContext(CartContext);
+  const { cartItem, wishlist, search, setSearch } = useContext(CartContext);
+  const [showInput, setShowInput] = useState(false);
+  const navigate = useNavigate();
+  const handleSearch = (e) => {
+    e.preventDefault();
+    navigate("/shop");
+  };
   const link = (
     <>
       <NavLink
@@ -91,15 +97,50 @@ const Header = () => {
               className="w-5 h-5 md:w-6 md:h-6 lg:w-[28px] lg:h-[28px]"
             />
           </button>
-          <button
-            title="Search"
-            className="hover:text-[#B88E2F] transition-colors"
-          >
-            <Search
-              strokeWidth={1.5}
-              className="w-5 h-5 md:w-6 md:h-6 lg:w-[28px] lg:h-[28px]"
-            />
-          </button>
+          <div className="relative">
+            {/* Search Button*/}
+            {!showInput && (
+              <button
+                title="Search"
+                onClick={() => setShowInput(true)}
+                className="hover:text-[#B88E2F] transition-colors mt-2"
+              >
+                <Search
+                  strokeWidth={1.5}
+                  className="w-5 h-5 md:w-6 md:h-6 lg:w-[28px] lg:h-[28px]"
+                />
+              </button>
+            )}
+
+            {/* Search Form*/}
+            {showInput && (
+              <form
+                onSubmit={handleSearch}
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-50"
+              >
+                <div className="relative flex items-center">
+                  <input
+                    autoFocus
+                    type="text"
+                    placeholder="Search products..."
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                    className="border border-[#B88E2F] px-4 py-2 rounded-md shadow-lg w-48 md:w-64 focus:outline-none bg-white pr-10"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setShowInput(false);
+                      setSearch("");
+                    }}
+                    className="absolute right-3 text-gray-400 hover:text-red-500"
+                  >
+                    <X size={18} />
+                  </button>
+                </div>
+              </form>
+            )}
+          </div>
           <button
             title="Wishlist"
             className="hover:text-[#B88E2F] transition-colors relative"
@@ -109,10 +150,10 @@ const Header = () => {
               className="w-5 h-5 md:w-6 md:h-6 lg:w-[28px] lg:h-[28px]"
             />
             {wishlist.length > 0 && (
-          <span className="absolute -top-1 -right-2 bg-[#B88E2F] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
-            {wishlist.length}
-          </span>
-        )}
+              <span className="absolute -top-1 -right-2 bg-[#B88E2F] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+                {wishlist.length}
+              </span>
+            )}
           </button>
           <button
             title="Cart"
@@ -122,13 +163,11 @@ const Header = () => {
               strokeWidth={1.5}
               className="w-5 h-5 md:w-6 md:h-6 lg:w-[28px] lg:h-[28px]"
             />
-            {
-              cartItem.length > 0 && (
-                <span className="absolute -top-1 -right-2 bg-[#B88E2F] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
-              {cartItem.reduce((sum,item) => sum + item.quantity,0)}
-            </span>
-              )
-            }
+            {cartItem.length > 0 && (
+              <span className="absolute -top-1 -right-2 bg-[#B88E2F] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+                {cartItem.reduce((sum, item) => sum + item.quantity, 0)}
+              </span>
+            )}
           </button>
 
           <button
@@ -160,11 +199,7 @@ const Header = () => {
         }`}
       >
         <div className="flex flex-col h-full px-8 py-10 justify-between">
-          <ul className="space-y-6 flex flex-col">
-
-             {link}
-         
-          </ul>
+          <ul className="space-y-6 flex flex-col">{link}</ul>
 
           {/* Mobile Bottom Info */}
           <div className="pb-10 space-y-4">

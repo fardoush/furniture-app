@@ -1,9 +1,15 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useContext } from "react";
 import { Circles } from "react-loader-spinner";
 import Products from "../Products/Products";
 import { Link } from "react-router";
+import { CartContext } from "../../Provider/CartProvider";
 
 const ProductSection = ({ products }) => {
+  const { search } = useContext(CartContext);
+
+  const filteredHomeProducts = products.filter((p) =>
+    p.title.toLowerCase().includes(search.toLowerCase())
+  );
   return (
     <div className="lg:container w-full mx-auto lg:py-[100px] md:py-[60px] py-10   px-5 md:px-10 lg:px-10 ">
       <div className="lg:pb-[60px] md:pb-10 pb-[30px]">
@@ -25,7 +31,7 @@ const ProductSection = ({ products }) => {
           </div>
         }
       >
-        <Products products={products} />
+        <Products products={filteredHomeProducts} />
       </Suspense>
 
       <div className="flex items-center justify-center py-10">

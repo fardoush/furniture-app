@@ -4,8 +4,12 @@ import { useLocation } from "react-router";
 
 const FeatureSection = () => {
   const location = useLocation();
-  const isExcludedPage = location.pathname === "/" ||location.pathname === "/shop";
-  if(isExcludedPage){
+  const isExcludedPage =
+    location.pathname === "/" ||
+    location.pathname === "/shop" ||
+    location.pathname === "/login" ||
+    location.pathname === "/register";
+  if (isExcludedPage) {
     return null;
   }
   const features = [
