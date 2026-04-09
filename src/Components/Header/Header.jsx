@@ -35,7 +35,7 @@ const Header = () => {
         Shop
         <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#B88E2F] transition-all duration-300 group-hover:w-full"></span>
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to="/about"
         className={({ isActive }) =>
           `text-[16px] font-medium transition-all duration-300 relative group py-2 
@@ -44,7 +44,7 @@ const Header = () => {
       >
         About
         <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#B88E2F] transition-all duration-300 group-hover:w-full"></span>
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to="/contact"
         className={({ isActive }) =>

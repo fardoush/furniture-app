@@ -7,14 +7,49 @@ import BlogCard from "../../Components/BlogCard/BlogCard";
 const Blog = () => {
   const blogs = useLoaderData();
 
+  // category count
+
+  const categoryCount = blogs.reduce((acc, item) => {
+    const category = item.category;
+    acc[category] = (acc[category] || 0) + 1;
+
+    return acc;
+  }, {});
+
+  const categoryList = Object.entries(categoryCount);
+  // search
+
+  const [search, setSearch] = useState("");
+  //category
+
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  const filteredBogs = blogs.filter((blog) => {
+    const matchSearch = blog.title.toLowerCase().includes(search.toLowerCase());
+    const matchCategory = selectedCategory
+      ? blog.category === selectedCategory
+      : true;
+    return matchCategory && matchSearch;
+  });
+
   // pagination
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 3;
   const lastIndex = currentPage * itemsPerPage;
   const firstIndex = lastIndex - itemsPerPage;
-  const currentBlogs = blogs.slice(firstIndex, lastIndex);
-  const totalPages = Math.ceil(blogs.length / itemsPerPage);
+  const currentBlogs = filteredBogs.slice(firstIndex, lastIndex);
+  const totalPages = Math.ceil(filteredBogs.length / itemsPerPage);
   const pages = [...Array(totalPages).keys()].map((n) => n + 1);
+
+  // recently post
+
+  const currentYear = new Date().getFullYear();
+
+  const recentPosts = blogs.filter((post) => {
+    const postYear = new Date(post.date).getFullYear();
+    return postYear === currentYear;
+  });
+
   // const blogs = [
   //   {
   //     id: 1,
@@ -53,37 +88,23 @@ const Blog = () => {
   return (
     <div className="">
       <DefaultBanner />
-      <div className="lg:container mx-auto px-5 md:px-10 py-10 font-sans">
-        <div className="flex flex-col lg:flex-row gap-20">
+      <div className="lg:container mx-auto px-5 md:px-10 py-10 lg:py-24 font-sans">
+        <div className="flex flex-col lg:flex-row lg:gap-20 md:gap-10 gap-5">
           {/* Main Blog Section */}
           <div className="lg:w-2/3 space-y-12">
             {currentBlogs.map((blog) => (
               <BlogCard key={blog.id} blog={blog} />
             ))}
-
-            {/* Pagination */}
-            {/* <div className="flex gap-4 pt-10">
-            <button className="bg-[#B88E2F] text-white px-4 py-2 rounded-lg">
-              1
-            </button>
-            <button className="bg-[#F9F1E7] px-4 py-2 rounded-lg hover:bg-[#B88E2F] hover:text-white">
-              2
-            </button>
-            <button className="bg-[#F9F1E7] px-4 py-2 rounded-lg hover:bg-[#B88E2F] hover:text-white">
-              3
-            </button>
-            <button className="bg-[#F9F1E7] px-4 py-2 rounded-lg hover:bg-[#B88E2F] hover:text-white">
-              Next
-            </button>
-          </div> */}
           </div>
 
           {/* Sidebar */}
-          <aside className="lg:w-1/3 space-y-10">
+          <aside className="lg:w-1/3 lg:space-y-10 space-y-5">
             {/* Search Bar */}
             <div className="relative">
               <input
                 type="text"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
                 className="w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]"
               />
               <FaSearch className="absolute right-4 top-4 text-gray-400" />
@@ -91,19 +112,24 @@ const Blog = () => {
 
             {/* Categories */}
             <div>
-              <h3 className="text-xl font-bold mb-6">Categories</h3>
-              <ul className="space-y-6 text-gray-500">
-                {["Crafts", "Design", "Handmade", "Interior", "Wood"].map(
-                  (cat, index) => (
-                    <li
-                      key={index}
-                      className="flex justify-between items-center"
-                    >
-                      <span>{cat}</span>
-                      <span>{Math.floor(Math.random() * 10)}</span>
-                    </li>
-                  ),
-                )}
+              <h3 className="text-xl font-bold lg:mb-6 mb-4">Categories</h3>
+              <ul className="space-y-2 text-gray-500">
+                {categoryList.map(([category, count]) => (
+                  <li
+                    key={category}
+                    onClick={() => setSelectedCategory(category)}
+                    className={`flex justify-between items-center py-2 px-4 rounded-lg cursor-pointer transition-all duration-200
+        ${
+          selectedCategory === category
+            ? "bg-[#FAF3EA] text-black font-semibold"
+            : "hover:bg-[#FAF3EA]"
+        }
+      `}
+                  >
+                    <span>{category}</span>
+                    <span>{count}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -111,7 +137,7 @@ const Blog = () => {
             <div>
               <h3 className="text-xl font-bold mb-6">Recent Posts</h3>
               <div className="space-y-6">
-                {blogs.map((post) => (
+                {recentPosts.map((post) => (
                   <div key={post.id} className="flex gap-4 items-center">
                     <img
                       src={post.image}
@@ -133,11 +159,11 @@ const Blog = () => {
 
         {/* Pagination  */}
 
-        <div className="flex items-center justify-center  gap-3 pt-10">
+        <div className="flex items-center justify-center gap-2 md:gap-3 pt-10">
           <button
             disabled={currentPage === 1}
             onClick={() => setCurrentPage(currentPage - 1)}
-            className="px-6 h-12 rounded-lg bg-[#F9F1E7] text-black  text-[16px] hover:bg-[#B88E2F] hover:text-white transition-all duration-300"
+            className=" px-2 md:px-6 h-12 rounded-lg bg-[#F9F1E7] text-black  text-[16px] hover:bg-[#B88E2F] hover:text-white transition-all duration-300"
           >
             Prev
           </button>
@@ -160,7 +186,7 @@ const Blog = () => {
           <button
             disabled={currentPage === totalPages}
             onClick={() => setCurrentPage(currentPage + 1)}
-            className="px-6 h-12 rounded-lg bg-[#F9F1E7] text-black  text-[16px] hover:bg-[#B88E2F] hover:text-white transition-all duration-300"
+            className="px-2 md:px-6 h-12 rounded-lg bg-[#F9F1E7] text-black  text-[16px] hover:bg-[#B88E2F] hover:text-white transition-all duration-300"
           >
             Next
           </button>
