@@ -2,6 +2,7 @@ import React from "react";
 import defaultbanner from "../../assets/hero_banner.jpg";
 import { Link, useLocation } from "react-router";
 import { ChevronRight } from "lucide-react";
+import favIcon from "../../assets/fav.svg"
 
 const DefaultBanner = () => {
   const location = useLocation();
@@ -15,13 +16,12 @@ const DefaultBanner = () => {
       <div className=" absolute top-0 inset-0 bg-gradient-to-r from-black/40 to-transparent "></div>
 
       <div className="relative z-10 flex flex-col items-center space-y-2 md:space-y-4 px-4">
+        <img src={favIcon} alt="" className="w-10 h-10" />
         <h1 className="text-3xl md:text-5xl font-semibold text-black tracking-wide">{displayTitle}</h1>
-
         <div className="flex items-center gap-1 md:gap-2 text-sm md:text-base">
-          {" "}
-          <Link to="/" className="font-semibold text-black hover:text-[#B88E2F] transition-colors duration-300">
+          <Link to="/" className="font-semibold text-black hover:text-primary transition-colors duration-300">
             Home
-          </Link>{" "}
+          </Link>
           <ChevronRight size={18} className="text-black font-bold" /> <Link to="/shop" className="text-black font-light">{displayTitle}</Link>
         </div>
       </div>

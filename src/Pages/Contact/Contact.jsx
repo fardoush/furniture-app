@@ -1,11 +1,29 @@
 import React from "react";
 import { MapPin, Phone, Clock } from "lucide-react";
 import DefaultBanner from "../../Components/DefaultBanner/DefaultBanner";
+import Swal from "sweetalert2";
 
 const Contact = () => {
+  const handleContactForm = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const subject = form.subject.value;
+    const message = form.message.value;
+    console.log(name, email, subject, message);
+
+    Swal.fire({
+      title: "Success!",
+      text: "Message sent successfully!",
+      icon: "success",
+      draggable: true,
+      confirmButtonColor: "#B88E2F",
+    });
+  };
   return (
     <div>
-        <DefaultBanner/>
+      <DefaultBanner />
       <section className="bg-white py-16 px-4 md:px-8 lg:px-24">
         <div className="max-w-6xl mx-auto">
           {/* Header Section */}
@@ -66,7 +84,7 @@ const Contact = () => {
 
             {/* Right Side: Contact Form */}
             <div className="w-full lg:w-2/3">
-              <form className="space-y-8">
+              <form onSubmit={handleContactForm} className="space-y-8">
                 {/* Your Name */}
                 <div>
                   <label className="block text-black font-medium mb-3">
@@ -74,7 +92,9 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    name="name"
                     placeholder="Abc"
+                    required
                     className="w-full border border-gray-300 rounded-lg px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[#B88E2F] transition-all"
                   />
                 </div>
@@ -86,7 +106,9 @@ const Contact = () => {
                   </label>
                   <input
                     type="email"
+                    name="email"
                     placeholder="Abc@def.com"
+                    required
                     className="w-full border border-gray-300 rounded-lg px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[#B88E2F] transition-all"
                   />
                 </div>
@@ -98,7 +120,9 @@ const Contact = () => {
                   </label>
                   <input
                     type="text"
+                    name="subject"
                     placeholder="This is an optional"
+                    required
                     className="w-full border border-gray-300 rounded-lg px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[#B88E2F] transition-all"
                   />
                 </div>
@@ -110,7 +134,9 @@ const Contact = () => {
                   </label>
                   <textarea
                     rows="4"
+                    name="message"
                     placeholder="Hi! I'd like to ask about"
+                    required
                     className="w-full border border-gray-300 rounded-lg px-4 py-4 focus:outline-none focus:ring-2 focus:ring-[#B88E2F] transition-all resize-none"
                   ></textarea>
                 </div>
