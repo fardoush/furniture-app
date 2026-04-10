@@ -14,6 +14,7 @@ import Checkout from "../Pages/Checkout/Checkout.jsx";
 import Blog from "../Pages/Blog/Blog.jsx";
 import Register from "../Components/Register/Register.jsx";
 import Login from "../Components/Login/Login.jsx";
+import axios from "axios";
 
 export const router = createBrowserRouter([
   {
@@ -23,7 +24,12 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch("/products.json"),
+        // loader: () => fetch("/products.json"),
+        loader: async () => {
+          await new Promise((res) => setTimeout(res, 1000));
+          const res = await fetch("/products.json");
+          return res.json();
+        },
         Component: Home,
       },
       {
@@ -38,44 +44,59 @@ export const router = createBrowserRouter([
         path: "gallery",
         Component: PhotoGallery,
       },
-       {
+      {
         path: "/shop",
-         loader: () => fetch("../../public/products.json"),
+        loader: async () => {
+          await new Promise((res) => setTimeout(res, 1000));
+          const res = await fetch("/products.json");
+          return res.json();
+        },
         Component: ShopPage,
       },
 
+      // {
+      //   path: "/productDetails/:id",
+      //    loader: () => fetch("../../public/products.json"),
+      //   Component: ProductDetails
+      // },
       {
         path: "/productDetails/:id",
-         loader: () => fetch("../../public/products.json"),
-        // loader: ({params}) => fetch(`../../public/products.json/${params.id}`),
-        Component: ProductDetails
+        loader: async () => {
+          await new Promise((res) => setTimeout(res, 1000));
+          const res = await fetch("/products.json");
+          return res.json();
+        },
+        Component: ProductDetails,
       },
       {
         path: "/cart",
-        Component: Cart
+        Component: Cart,
       },
       {
         path: "/checkout",
-        Component: Checkout
+        Component: Checkout,
       },
       {
         path: "/contact",
-        Component: Contact
+        Component: Contact,
       },
       {
         path: "/blog",
-        loader: () => fetch("../../public/products.json"),
-        Component: Blog
+        loader: async () => {
+          await new Promise((res) => setTimeout(res, 1000));
+          const res = await fetch("/products.json");
+          return res.json();
+        },
+        Component: Blog,
       },
       {
         path: "/login",
-        Component: Login
+        Component: Login,
       },
       {
         path: "/register",
-        Component: Register
-      }
+        Component: Register,
+      },
     ],
   },
- 
 ]);

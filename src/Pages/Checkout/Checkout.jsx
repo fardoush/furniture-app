@@ -2,6 +2,8 @@ import React from 'react';
 import DefaultBanner from '../../Components/DefaultBanner/DefaultBanner';
 
 const Checkout = () => {
+
+  
     return (
         <div className="">
      
@@ -16,17 +18,17 @@ const Checkout = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="flex flex-col gap-2">
                 <label className="font-medium">First Name</label>
-                <input type="text" className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
+                <input type="text" name='firstname' className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
               </div>
               <div className="flex flex-col gap-2">
                 <label className="font-medium">Last Name</label>
-                <input type="text" className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
+                <input type="text" name='lastname' className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
               </div>
             </div>
 
             <div className="flex flex-col gap-2">
               <label className="font-medium">Company Name (Optional)</label>
-              <input type="text" className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
+              <input type="text" name='companyname' className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
             </div>
 
             <div className="flex flex-col gap-2">
@@ -39,21 +41,21 @@ const Checkout = () => {
 
             <div className="flex flex-col gap-2">
               <label className="font-medium">Street address</label>
-              <input type="text" placeholder="House number and street name" className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
+              <input type="text" name='address' placeholder="House number and street name" className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
             </div>
 
             <div className="flex flex-col gap-2">
               <label className="font-medium">Town / City</label>
-              <input type="text" className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
+              <input type="text" name='city' className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
             </div>
 
             <div className="flex flex-col gap-2">
               <label className="font-medium">Email address</label>
-              <input type="email" className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
+              <input type="email" name='email' className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
             </div>
 
             <div className="mt-4">
-              <input type="text" placeholder="Additional information" className="border border-gray-400 rounded-md p-3 w-full focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
+              <input type="text" name='info' placeholder="Additional information" className="border border-gray-400 rounded-md p-3 w-full focus:outline-none focus:ring-1 focus:ring-[#B88E2F]" />
             </div>
           </form>
         </div>
