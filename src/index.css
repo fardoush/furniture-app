@@ -20,7 +20,7 @@
 }
 @theme {
 
-  --color-primary: #B88E2F;
+  --color-primary: #B88E2F !important;
   --color-base-gray: #F4F5F7;
   --font-sans: "Poppins", sans-serif;
 }
