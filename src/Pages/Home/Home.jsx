@@ -5,7 +5,6 @@ import ProductSection from "../../Components/ProductSection/ProductSection";
 import PhotoGallery from "../../Components/PhotoGallery/PhotoGallery";
 import { useLoaderData, useNavigation } from "react-router";
 import Slider from "../../Components/Slider/Slider";
-import { ClipLoader } from "react-spinners";
 import { Triangle } from "react-loader-spinner";
 
 const Home = () => {
