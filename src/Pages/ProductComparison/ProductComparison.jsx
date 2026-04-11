@@ -6,7 +6,7 @@ const productList = [
     name: "Asgaard Sofa",
     price: "250,080.00",
     rating: 4.7,
-    image: "https://i.imgur.com/4R2tQ2v.png",
+    image: "/src/assets/product3.jpg",
     specs: {
       "Sales Package": "1 sectional sofa",
       "Model Number": "TFCBUGRBL6SRHS",
@@ -29,7 +29,7 @@ const productList = [
     name: "Outdoor Sofa Set",
     price: "224,000.00",
     rating: 4.2,
-    image: "https://i.imgur.com/2nCt3Sbl.png",
+    image: "https://i.ibb.co.com/5W1W7VdJ/photo-1640833135825-73928f12cc04.avif",
     specs: {
       "Sales Package": "1 Three Seater, 2 Single Seater",
       "Model Number": "DTUBUGRBL568",
@@ -52,7 +52,7 @@ const productList = [
     name: "Luxury Velvet Sofa",
     price: "310,000.00",
     rating: 4.9,
-    image: "https://i.imgur.com/9YjYQ8K.png",
+    image: "/src/assets/product4.jpg",
     specs: {
       "Sales Package": "1 Sofa, 2 Pillows",
       "Model Number": "LUX-V772",
