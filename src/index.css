@@ -4,36 +4,30 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* @plugin "daisyui/theme" {
-  name: "light";
-  default: true;
-  --primary: #B88E2F;
-  --secondary: teal;
-  --black: #333333;
-  --acent: #3A3A3A;
-  --base: #F9F1E7;
-  --base-gray: #F4F5F7;
 
-  --color-primary: #B88E2F;
-  --color-base-gray: #F4F5F7;
-
-} */
 @theme {
-
-  --color-primary: #B88E2F ;
-  --color-base-100: #F4F5F7;
-  --color-base-300: #F9F1E7;
+  --color-primary: #B88E2F;
+  --color-secondary: teal;
+  --color-neutral: #333333;
+  --color-accent: #3A3A3A;
+  --color-base-100: #F9F1E7;
+  
   --font-sans: "Poppins", sans-serif;
 }
+
 :root {
   --p: 43 46% 45%; 
-  --primary: #B88E2F;
+  --primary: #B88E2F !important;
+  --s: 180 100% 25%;
+  --secondary: teal !important;
 }
-body{
-    font-family: "Poppins", sans-serif;
 
+.btn-primary {
+  background-color: #B88E2F !important;
+  border-color: #B88E2F !important;
+  color: white !important;
 }
-/* @theme{
-    --font-display: "Poppins", sans-serif;
 
-} */
+body {
+  font-family: "Poppins", sans-serif;
+}
