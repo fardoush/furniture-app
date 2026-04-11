@@ -4,17 +4,17 @@ const ProductRange = () => {
   const productRange = [
     {
       id: 1,
-      img: "/src/assets/productRange1.jpg",
+      img: "/images/productRange1.jpg",
       title: "Dining",
     },
     {
       id: 2,
-      img: "/src/assets/productRange2.jpg",
+      img: "/images/productRange2.jpg",
       title: "Living",
     },
     {
       id: 3,
-      img: "/src/assets/productRange3.jpg",
+      img: "/images/productRange3.jpg",
       title: "Bedroom",
     },
   ];

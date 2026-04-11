@@ -6,7 +6,7 @@ const productList = [
     name: "Asgaard Sofa",
     price: "250,080.00",
     rating: 4.7,
-    image: "/src/assets/product3.jpg",
+    image: "/images/product3.jpg",
     specs: {
       "Sales Package": "1 sectional sofa",
       "Model Number": "TFCBUGRBL6SRHS",
@@ -52,7 +52,7 @@ const productList = [
     name: "Luxury Velvet Sofa",
     price: "310,000.00",
     rating: 4.9,
-    image: "/src/assets/product4.jpg",
+    image: "/images/product4.jpg",
     specs: {
       "Sales Package": "1 Sofa, 2 Pillows",
       "Model Number": "LUX-V772",

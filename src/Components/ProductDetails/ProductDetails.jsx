@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import product1 from "../../assets/product11.jpg";
-import product2 from "../../assets/product12.jpg";
-import product3 from "../../assets/product13.jpg";
+import product1 from "/images/product11.jpg";
+import product2 from "/images/product12.jpg";
+import product3 from "/images/product13.jpg";
 import { ChevronRight, Minus, Plus } from "lucide-react";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link, useLoaderData, useParams } from "react-router";

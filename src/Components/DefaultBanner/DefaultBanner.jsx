@@ -1,8 +1,8 @@
 import React from "react";
-import defaultbanner from "../../assets/hero_banner.jpg";
+import defaultbanner from "/images/hero_banner.jpg";
 import { Link, useLocation } from "react-router";
 import { ChevronRight } from "lucide-react";
-import favIcon from "../../assets/fav.svg"
+import favIcon from "/images/fav.svg"
 
 const DefaultBanner = () => {
   const location = useLocation();

@@ -1,6 +1,6 @@
 import { Heart, Search, ShoppingCart, UserRound, Menu, X } from "lucide-react";
 import React, { useContext, useState } from "react";
-import logo from "../../assets/logo.svg";
+import logo from "/images/logo.svg";
 import { NavLink, useNavigate } from "react-router";
 import { CartContext } from "../../Provider/CartProvider";
 
