@@ -15,6 +15,7 @@ import Blog from "../Pages/Blog/Blog.jsx";
 import Register from "../Components/Register/Register.jsx";
 import Login from "../Components/Login/Login.jsx";
 import axios from "axios";
+import ProductComparison from "../Pages/ProductComparison/ProductComparison.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -88,6 +89,10 @@ export const router = createBrowserRouter([
           return res.json();
         },
         Component: Blog,
+      },
+      {
+        path: "/comparison",
+        Component: ProductComparison,
       },
       {
         path: "/login",

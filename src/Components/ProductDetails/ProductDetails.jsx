@@ -36,6 +36,16 @@ const ProductDetails = () => {
   // const [quantity, setQuantity] = useState(1);
   const [selectedColor, setSelectedColor] = useState(colors[0]);
   const [selectedSize, setSelectedSize] = useState(sizes[0]);
+  // category image
+  const [mainImage, setMainImage] = useState(image);
+
+  const relatedImages = products.filter(
+    (item) => item.category === category && item.id !== productId,
+  );
+  const handleImageChange = (img) => {
+    setMainImage(img);
+  };
+
   const productImg = [
     {
       id: 1,
@@ -54,7 +64,9 @@ const ProductDetails = () => {
   ];
 
   const handleAddToCart = () => {
-    const existingProduct = cartItem.find((item) => item.id === productId);
+    const existingProduct = cartItem
+      .find((item) => item.id === productId)
+      .slice(0, 3);
 
     if (existingProduct) {
       const updatedCart = cartItem.map((item) =>
@@ -97,26 +109,42 @@ const ProductDetails = () => {
         <div className="lg:container w-full mx-auto px-4 py-8 lg:py-16">
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
             {/* LEFT SIDE: Image Gallery */}
+
             <div className="w-full lg:w-1/2 flex gap-4 md:gap-8">
+              {/* thumbnail image  */}
               <div className="flex flex-col gap-4">
-                {productImg.map((proImg) => (
+                <div
+                  onClick={() => handleImageChange(image)}
+                  className="w-16 h-16 md:w-20 md:h-20 rounded-lg bg-[#F9F1E7] cursor-pointer overflow-hidden"
+                >
+                  <img
+                    src={image}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* related images  */}
+                {relatedImages.slice(0, 3).map((item) => (
                   <div
-                    key={proImg.id}
-                    className="w-16 h-16 md:w-20 md:h-20 rounded-lg bg-[#F9F1E7] flex justify-center items-center cursor-pointer overflow-hidden transition-transform hover:scale-105"
+                    key={item.id}
+                    onClick={() => handleImageChange(item.image)}
+                    className={`w-16 h-16 md:h-20 rounded-lg bg-[#F9F1E7] cursor-pointer overflow-hidden hover:scale-105 transition ${
+                      mainImage === item.image ? "ring-2 ring-primary" : ""
+                    }`}
                   >
                     <img
-                      src={proImg.img}
-                      alt="thumbnail"
-                      className="w-full h-full object-contain p-1"
+                      src={item.image}
+                      alt=""
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 ))}
               </div>
 
-              {/* Main Image */}
               <div className="bg-[#F9F1E7] rounded-xl flex-1 flex items-center justify-center p-4 md:p-8 max-h-[400px]">
                 <img
-                  src={image}
+                  src={mainImage}
                   alt={title}
                   className="w-full h-auto object-contain max-h-[300px]"
                 />
@@ -181,15 +209,15 @@ const ProductDetails = () => {
                 <span className="text-sm text-[#9F9F9F] block mb-3">Color</span>
                 <div className="flex gap-4">
                   {colors.map((color) => (
-    <button
-      key={color}
-      onClick={() => setSelectedColor(color)}
-      className={`w-8 h-8 rounded-full ring-offset-2 transition-all duration-200 ${
-        selectedColor === color ? "ring-2 ring-black" : "ring-0"
-      }`}
-      style={{ backgroundColor: color }}
-    ></button>
-  ))}
+                    <button
+                      key={color}
+                      onClick={() => setSelectedColor(color)}
+                      className={`w-8 h-8 rounded-full ring-offset-2 transition-all duration-200 ${
+                        selectedColor === color ? "ring-2 ring-black" : "ring-0"
+                      }`}
+                      style={{ backgroundColor: color }}
+                    ></button>
+                  ))}
                   {/* <button className="w-8 h-8 rounded-full bg-[#816DFA] ring-offset-2 hover:ring-2 ring-[#816DFA]"></button>
                   <button className="w-8 h-8 rounded-full bg-black ring-offset-2 hover:ring-2 ring-black"></button>
                   <button className="w-8 h-8 rounded-full bg-[#B88E2F] ring-offset-2 hover:ring-2 ring-[#B88E2F]"></button> */}
@@ -230,9 +258,12 @@ const ProductDetails = () => {
                 >
                   Add To Cart
                 </button>
-                <button className="flex-1 md:flex-none px-12 py-3 border border-black rounded-xl text-black text-[18px] font-medium flex items-center justify-center gap-2 hover:bg-black hover:text-white hover:shadow-lg active:scale-95 transition-all duration-300">
+                <Link
+                  to="/comparison"
+                  className="flex-1 md:flex-none px-12 py-3 border border-black rounded-xl text-black text-[18px] font-medium flex items-center justify-center gap-2 hover:bg-black hover:text-white hover:shadow-lg active:scale-95 transition-all duration-300"
+                >
                   <Plus size={18} strokeWidth={2.5} /> Compare
-                </button>
+                </Link>
               </div>
 
               {/* Metadata Section */}

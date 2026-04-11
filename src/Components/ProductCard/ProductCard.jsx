@@ -97,10 +97,10 @@ const ProductCard = ({ product, view }) => {
               <Share2 />
               Share
             </span>
-            <span className="flex items-center gap-1 cursor-pointer hover:text-[#B88E2F] duration-500">
+            <Link to="/comparison" className="flex items-center gap-1 cursor-pointer hover:text-[#B88E2F] duration-500">
               <ArrowRightLeft />
               Compare
-            </span>
+            </Link>
             <button onClick={() => handleAddToWishlist(product)} className="flex items-center gap-1 cursor-pointer hover:text-[#B88E2F] duration-500">
               <Heart />
               Like

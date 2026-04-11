@@ -101,7 +101,7 @@ const total = cartItem.reduce(
           <Link to="/checkout" className="btn btn-outline rounded-full  md:px-6 px-4">
             Checkout
           </Link>
-          <Link className="btn btn-outline rounded-full  md:px-6 px-4">
+          <Link to="/comparison" className="btn btn-outline rounded-full  md:px-6 px-4">
             Comparison
           </Link>
         </div>
