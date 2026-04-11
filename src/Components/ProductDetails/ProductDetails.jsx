@@ -64,9 +64,8 @@ const ProductDetails = () => {
   ];
 
   const handleAddToCart = () => {
-    const existingProduct = cartItem
-      .find((item) => item.id === productId)
-      .slice(0, 3);
+    const existingProduct = cartItem.find((item) => item.id === productId);
+    // .slice(0, 3);
 
     if (existingProduct) {
       const updatedCart = cartItem.map((item) =>
@@ -84,7 +83,7 @@ const ProductDetails = () => {
   return (
     <div className="">
       <div className="bg-[#F9F1E7] py-5">
-        <div className="lg:container mx-auto">
+        <div className="lg:container mx-auto px-5 md:px-10 lg:px-0">
           <div className="flex gap-3 items-center text-base md:text-lg">
             <Link
               to="/"
@@ -254,13 +253,13 @@ const ProductDetails = () => {
 
                 <button
                   onClick={handleAddToCart}
-                  className="flex-1 md:flex-none px-12 py-3 border border-black rounded-xl text-black text-[18px] font-medium hover:bg-black hover:text-white hover:shadow-lg active:scale-95 transition-all duration-300"
+                  className="flex-1 md:flex-none lg:px-12  px-3 py-3 border border-primary rounded-xl text-primary text-[18px] font-medium hover:bg-primary hover:text-white hover:shadow-lg active:scale-95 transition-all duration-300"
                 >
                   Add To Cart
                 </button>
                 <Link
                   to="/comparison"
-                  className="flex-1 md:flex-none px-12 py-3 border border-black rounded-xl text-black text-[18px] font-medium flex items-center justify-center gap-2 hover:bg-black hover:text-white hover:shadow-lg active:scale-95 transition-all duration-300"
+                  className="flex-1 md:flex-none lg:px-12 px-3 py-3 border border-primary rounded-xl text-primary text-[18px] font-medium flex items-center justify-center gap-2 hover:bg-primary hover:text-white hover:shadow-lg active:scale-95 transition-all duration-300"
                 >
                   <Plus size={18} strokeWidth={2.5} /> Compare
                 </Link>

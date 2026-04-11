@@ -171,11 +171,10 @@ const ProductComparison = () => {
           </div>
         </div>
 
-        {/* --- COMPARISON TABLE SECTION WITH SCROLL --- */}
 {/* --- COMPARISON SECTION --- */}
 <div className="mt-12">
   
-  {/* ১. Desktop & Tablet View (Hidden below 768px) */}
+  {/*  Desktop & Tablet View (Hidden below 768px) */}
   <div className="hidden md:block overflow-hidden border border-gray-100 rounded-2xl shadow-sm bg-white">
     <div className="w-full overflow-x-auto custom-scrollbar">
       <table className="w-full text-left border-collapse min-w-[900px] lg:min-w-full">
@@ -226,7 +225,6 @@ const ProductComparison = () => {
     </div>
   </div>
 
-  {/* ২. Mobile View (Shown only below 768px down to 320px) */}
   <div className="md:hidden space-y-6">
     {selected.length === 0 ? (
       <p className="text-center text-gray-500 py-10">No products selected for comparison.</p>

@@ -11,14 +11,14 @@ const TabContent = () => {
     <div className="lg:container w-full mx-auto px-4 py-20 font-sans">
       <Tabs selectedTabClassName="text-black border-b-2 border-primary">
         {/* Tab Navigation */}
-        <TabList className="flex justify-center space-x-8  mb-8 list-none cursor-pointer text-lg text-gray-400">
-          <Tab className="pb-2 focus:outline-none transition-colors focus:text-primary font-semibold">
+        <TabList className="flex justify-center space-x-8  mb-8 list-none cursor-pointer md:text-lg text-sm text-gray-400">
+          <Tab className="pb-2 focus:outline-none transition-colors focus:text-primary font-semibold ">
             Description
           </Tab>
-          <Tab className="pb-2 focus:outline-none transition-colors focus:text-primary font-semibold">
+          <Tab className="pb-2 focus:outline-none transition-colors focus:text-primary font-semibold ">
             Additional Information
           </Tab>
-          <Tab className="pb-2 focus:outline-none transition-colors focus:text-primary font-semibold">
+          <Tab className="pb-2 focus:outline-none transition-colors focus:text-primary font-semibold ">
             Reviews [5]
           </Tab>
         </TabList>

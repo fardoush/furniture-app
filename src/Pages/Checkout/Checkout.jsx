@@ -6,9 +6,10 @@ import { CartContext } from "../../Provider/CartProvider";
 const Checkout = () => {
   const { cartItem } = useContext(CartContext);
 
-  const totalPrice = cartItem.reduce((total, item) => {
-    return total + item.price;
-  }, 0);
+const totalPrice = cartItem.reduce(
+  (total, item) => total + (item.price * item.quantity),
+  0
+);
 
   const handleSubmitCheckout = (e) => {
     e.preventDefault();
