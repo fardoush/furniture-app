@@ -41,7 +41,7 @@ const ProductRange = () => {
                   className="object-cover rounded-xl w-full md:h-[480px] h-auto  transition-transform duration-500 ease-in-out group-hover:scale-110 "
                 />
               </div>
-              <h6 className="text-center font-bold transition-colors duration-300 group-hover:text-primary">
+              <h6 className="text-center font-bold transition-colors duration-300 group-hover:text-[#B88E2F]">
                 {product.title}
               </h6>
             </div>

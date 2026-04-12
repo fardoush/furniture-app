@@ -19,51 +19,51 @@ const Header = () => {
         to="/"
         className={({ isActive }) =>
           `text-[16px] font-medium transition-all duration-300 relative group py-2 
-          ${isActive ? "text-primary" : "text-black hover:text-primary"}`
+          ${isActive ? "text-[#B88E2F]" : "text-black hover:text-[#B88E2F]"}`
         }
       >
         Home
-        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#B88E2F] transition-all duration-300 group-hover:w-full"></span>
       </NavLink>
       <NavLink
         to="/shop"
         className={({ isActive }) =>
           `text-[16px] font-medium transition-all duration-300 relative group py-2 
-          ${isActive ? "text-primary" : "text-black hover:text-primary"}`
+          ${isActive ? "text-[#B88E2F]" : "text-black hover:text-[#B88E2F]"}`
         }
       >
         Shop
-        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#B88E2F] transition-all duration-300 group-hover:w-full"></span>
       </NavLink>
       {/* <NavLink
         to="/about"
         className={({ isActive }) =>
           `text-[16px] font-medium transition-all duration-300 relative group py-2 
-          ${isActive ? "text-primary" : "text-black hover:text-primary"}`
+          ${isActive ? "text-[#B88E2F]" : "text-black hover:text-[#B88E2F]"}`
         }
       >
         About
-        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#B88E2F] transition-all duration-300 group-hover:w-full"></span>
       </NavLink> */}
       <NavLink
         to="/contact"
         className={({ isActive }) =>
           `text-[16px] font-medium transition-all duration-300 relative group py-2 
-          ${isActive ? "text-primary" : "text-black hover:text-primary"}`
+          ${isActive ? "text-[#B88E2F]" : "text-black hover:text-[#B88E2F]"}`
         }
       >
         Contact
-        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#B88E2F] transition-all duration-300 group-hover:w-full"></span>
       </NavLink>
       <NavLink
         to="/blog"
         className={({ isActive }) =>
           `text-[16px] font-medium transition-all duration-300 relative group py-2 
-          ${isActive ? "text-primary" : "text-black hover:text-primary"}`
+          ${isActive ? "text-[#B88E2F]" : "text-black hover:text-[#B88E2F]"}`
         }
       >
         Blog
-        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+        <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#B88E2F] transition-all duration-300 group-hover:w-full"></span>
       </NavLink>
     </>
   );
@@ -90,7 +90,7 @@ const Header = () => {
         <div className="flex items-center gap-2 md:gap-4 lg:gap-6">
           {/* <button
             title="Account"
-            className="hover:text-primary transition-colors"
+            className="hover:text-[#B88E2F] transition-colors"
           >
             <UserRound
               strokeWidth={1.5}
@@ -103,7 +103,7 @@ const Header = () => {
               <button
                 title="Search"
                 onClick={() => setShowInput(true)}
-                className="hover:text-primary transition-colors mt-2"
+                className="hover:text-[#B88E2F] transition-colors mt-2"
               >
                 <Search
                   strokeWidth={1.5}
@@ -125,7 +125,7 @@ const Header = () => {
                     placeholder="Search products..."
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    className="border border-primary px-4 py-2 rounded-md shadow-lg w-48 md:w-64 focus:outline-none bg-white pr-10"
+                    className="border border-[#B88E2F] px-4 py-2 rounded-md shadow-lg w-48 md:w-64 focus:outline-none bg-white pr-10"
                   />
                   <button
                     type="button"
@@ -143,28 +143,28 @@ const Header = () => {
           </div>
           <button
             title="Wishlist"
-            className="hover:text-primary transition-colors relative"
+            className="hover:text-[#B88E2F] transition-colors relative"
           >
             <Heart
               strokeWidth={1.5}
               className="w-5 h-5 md:w-6 md:h-6 lg:w-[28px] lg:h-[28px]"
             />
             {wishlist.length > 0 && (
-              <span className="absolute -top-1 -right-2 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+              <span className="absolute -top-1 -right-2 bg-[#B88E2F] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
                 {wishlist.length}
               </span>
             )}
           </button>
           <button
             title="Cart"
-            className="relative hover:text-primary transition-colors"
+            className="relative hover:text-[#B88E2F] transition-colors"
           >
             <ShoppingCart
               strokeWidth={1.5}
               className="w-5 h-5 md:w-6 md:h-6 lg:w-[28px] lg:h-[28px]"
             />
             {cartItem.length > 0 && (
-              <span className="absolute -top-1 -right-2 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
+              <span className="absolute -top-1 -right-2 bg-[#B88E2F] text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">
                 {cartItem.reduce((sum, item) => sum + item.quantity, 0)}
               </span>
             )}
@@ -203,7 +203,7 @@ const Header = () => {
 
           {/* Mobile Bottom Info */}
           <div className="pb-10 space-y-4">
-            <button className="w-full h-[60px] bg-primary text-white font-bold rounded-lg shadow-lg active:scale-95 transition-transform">
+            <button className="w-full h-[60px] bg-[#B88E2F] text-white font-bold rounded-lg shadow-lg active:scale-95 transition-transform">
               Login / Register
             </button>
             <p className="text-center text-gray-400 text-sm italic">

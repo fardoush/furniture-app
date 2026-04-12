@@ -110,7 +110,7 @@ const ProductCard = ({ product, view }) => {
       </div>
       <Link to={`/productDetails/${id}`}>
         <div className="p-4 md:p-5">
-          <h3 className="text-[#3A3A3A] font-bold text-[24px] mb-1 group-hover:text-primary transition-colors duration-500">
+          <h3 className="text-[#3A3A3A] font-bold text-[24px] mb-1 group-hover:text-[#B88E2F] transition-colors duration-500">
             {title}
           </h3>
           <p className="text-[#898989] font-medium text-[16px] mb-2">

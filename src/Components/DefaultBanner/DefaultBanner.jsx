@@ -19,7 +19,7 @@ const DefaultBanner = () => {
         <img src={favIcon} alt="" className="w-10 h-10" />
         <h1 className="text-3xl md:text-5xl font-semibold text-black tracking-wide">{displayTitle}</h1>
         <div className="flex items-center gap-1 md:gap-2 text-sm md:text-base">
-          <Link to="/" className="font-semibold text-black hover:text-primary transition-colors duration-300">
+          <Link to="/" className="font-semibold text-black hover:text-[#B88E2F] transition-colors duration-300">
             Home
           </Link>
           <ChevronRight size={18} className="text-black font-bold" /> <Link to="/shop" className="text-black font-light">{displayTitle}</Link>

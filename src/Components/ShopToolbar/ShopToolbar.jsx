@@ -45,37 +45,37 @@ const ShopToolbar = ({
 
               {open && (
                 <div className="absolute top-14 left-0 bg-white shadow-lg rounded w-44 z-50">
-                  <p className="px-4 py-2 text-sm font-semibold text-primary">
+                  <p className="px-4 py-2 text-sm font-semibold text-[#B88E2F]">
                     Category
                   </p>
 
                   <button
                     onClick={() => setCategoryFilter("all")}
-                    className="block w-full text-left px-4 py-2 hover:text-primary hover:bg-[#F9F1E7] focus:text-primary focus:bg-[#F9F1E7]"
+                    className="block w-full text-left px-4 py-2 hover:text-[#B88E2F] hover:bg-[#F9F1E7] focus:text-[#B88E2F] focus:bg-[#F9F1E7]"
                   >
                     All
                   </button>
                   <button
                     onClick={() => setCategoryFilter("Chairs")}
-                    className="block w-full text-left px-4 py-2 hover:text-primary hover:bg-[#F9F1E7] focus:text-primary focus:bg-[#F9F1E7]"
+                    className="block w-full text-left px-4 py-2 hover:text-[#B88E2F] hover:bg-[#F9F1E7] focus:text-[#B88E2F] focus:bg-[#F9F1E7]"
                   >
                     Chairs
                   </button>
                   <button
                     onClick={() => setCategoryFilter("Sofas")}
-                    className="block w-full text-left px-4 py-2 hover:text-primary hover:bg-[#F9F1E7] focus:text-primary focus:bg-[#F9F1E7]"
+                    className="block w-full text-left px-4 py-2 hover:text-[#B88E2F] hover:bg-[#F9F1E7] focus:text-[#B88E2F] focus:bg-[#F9F1E7]"
                   >
                     Sofas
                   </button>
                   <button
                     onClick={() => setCategoryFilter("Tables")}
-                    className="block w-full text-left px-4 py-2 hover:text-primary hover:bg-[#F9F1E7] focus:text-primary focus:bg-[#F9F1E7]"
+                    className="block w-full text-left px-4 py-2 hover:text-[#B88E2F] hover:bg-[#F9F1E7] focus:text-[#B88E2F] focus:bg-[#F9F1E7]"
                   >
                     Tables
                   </button>
                   <button
                     onClick={() => setCategoryFilter("Beds")}
-                    className="block w-full text-left px-4 py-2 hover:text-primary hover:bg-[#F9F1E7] focus:text-primary focus:bg-[#F9F1E7]"
+                    className="block w-full text-left px-4 py-2 hover:text-[#B88E2F] hover:bg-[#F9F1E7] focus:text-[#B88E2F] focus:bg-[#F9F1E7]"
                   >
                     Beds
                   </button>
@@ -83,25 +83,25 @@ const ShopToolbar = ({
                   {/* <div className="divider py-0"></div> */}
                   {/* <hr className="" /> */}
 
-                  <p className="px-4 py-2 text-sm font-semibold text-primary border-t border-gray-300">
+                  <p className="px-4 py-2 text-sm font-semibold text-[#B88E2F] border-t border-gray-300">
                     Price
                   </p>
 
                   <button
                     onClick={() => setFilter("cheap")}
-                    className="block w-full text-left px-4 py-2 hover:bg-[#F9F1E7] hover:text-primary focus:text-primary focus:bg-[#F9F1E7]"
+                    className="block w-full text-left px-4 py-2 hover:bg-[#F9F1E7] hover:text-[#B88E2F] focus:text-[#B88E2F] focus:bg-[#F9F1E7]"
                   >
                     Cheap
                   </button>
                   <button
                     onClick={() => setFilter("expensive")}
-                    className="block w-full text-left px-4 py-2 hover:bg-[#F9F1E7] hover:text-primary focus:text-primary focus:bg-[#F9F1E7]"
+                    className="block w-full text-left px-4 py-2 hover:bg-[#F9F1E7] hover:text-[#B88E2F] focus:text-[#B88E2F] focus:bg-[#F9F1E7]"
                   >
                     Expensive
                   </button>
                   <button
                     onClick={() => setFilter("all")}
-                    className="block w-full text-left px-4 py-2 hover:bg-[#F9F1E7] hover:text-primary focus:text-primary focus:bg-[#F9F1E7]"
+                    className="block w-full text-left px-4 py-2 hover:bg-[#F9F1E7] hover:text-[#B88E2F] focus:text-[#B88E2F] focus:bg-[#F9F1E7]"
                   >
                     Reset
                   </button>

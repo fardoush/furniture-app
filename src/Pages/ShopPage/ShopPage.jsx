@@ -99,8 +99,8 @@ const ShopPage = () => {
                 className={`w-12 h-12 rounded-lg  transition-all duration-300
                 ${
                   currentPage === page
-                    ? "bg-primary text-white font-semibold"
-                    : " text-black bg-[#F9F1E7] hover:bg-primary hover:text-white font-normal"
+                    ? "bg-[#B88E2F] text-white font-semibold"
+                    : " text-black bg-[#F9F1E7] hover:bg-[#B88E2F] hover:text-white font-normal"
                 }
                 `}
               >

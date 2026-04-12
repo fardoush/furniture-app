@@ -129,7 +129,7 @@ const ProductDetails = () => {
                     key={item.id}
                     onClick={() => handleImageChange(item.image)}
                     className={`w-16 h-16 md:h-20 rounded-lg bg-[#F9F1E7] cursor-pointer overflow-hidden hover:scale-105 transition ${
-                      mainImage === item.image ? "ring-2 ring-primary" : ""
+                      mainImage === item.image ? "ring-2 ring-[#B88E2F]" : ""
                     }`}
                   >
                     <img
@@ -195,7 +195,7 @@ const ProductDetails = () => {
                     <button
                       key={size}
                       onClick={() => setSelectedSize(size)}
-                      className={`w-8 h-8 rounded-md flex items-center justify-center text-[13px] transition-colors ${selectedSize === size ? "bg-primary text-white" : "bg-[#F9F1E7] text-black"}`}
+                      className={`w-8 h-8 rounded-md flex items-center justify-center text-[13px] transition-colors ${selectedSize === size ? "bg-[#B88E2F] text-white" : "bg-[#F9F1E7] text-black"}`}
                     >
                       {size}
                     </button>
@@ -253,13 +253,13 @@ const ProductDetails = () => {
 
                 <button
                   onClick={handleAddToCart}
-                  className="flex-1 md:flex-none lg:px-12  px-3 py-3 border border-primary rounded-xl text-primary text-[18px] font-medium hover:bg-primary hover:text-white hover:shadow-lg active:scale-95 transition-all duration-300"
+                  className="flex-1 md:flex-none lg:px-12  px-3 py-3 border border-[#B88E2F] rounded-xl text-[#B88E2F] text-[18px] font-medium hover:bg-[#B88E2F] hover:text-white hover:shadow-lg active:scale-95 transition-all duration-300"
                 >
                   Add To Cart
                 </button>
                 <Link
                   to="/comparison"
-                  className="flex-1 md:flex-none lg:px-12 px-3 py-3 border border-primary rounded-xl text-primary text-[18px] font-medium flex items-center justify-center gap-2 hover:bg-primary hover:text-white hover:shadow-lg active:scale-95 transition-all duration-300"
+                  className="flex-1 md:flex-none lg:px-12 px-3 py-3 border border-[#B88E2F] rounded-xl text-[#B88E2F] text-[18px] font-medium flex items-center justify-center gap-2 hover:bg-[#B88E2F] hover:text-white hover:shadow-lg active:scale-95 transition-all duration-300"
                 >
                   <Plus size={18} strokeWidth={2.5} /> Compare
                 </Link>

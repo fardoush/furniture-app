@@ -25,7 +25,7 @@ const RelatedProducts = ({ products }) => {
 <div className="flex items-center justify-center py-10">
         <Link
           to="/shop"
-          className="btn py-3 px-12 border-2 border-primary bg-transparent text-primary transition-colors duration-500 hover:bg-primary hover:text-white tracking-wide  rounded-none"
+          className="btn py-3 px-12 border-2 border-[#B88E2F] bg-transparent text-[#B88E2F] transition-colors duration-500 hover:bg-[#B88E2F] hover:text-white tracking-wide  rounded-none"
         >
           See More
         </Link>

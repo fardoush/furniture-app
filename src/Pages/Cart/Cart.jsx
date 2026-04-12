@@ -55,7 +55,7 @@ const Cart = () => {
                       <td>
                         <MdDelete
                           onClick={() => handleRemoveFormCart(cart.id)}
-                          className="text-primary w-6 h-6"
+                          className="text-[#B88E2F] w-6 h-6"
                         />
                       </td>
                     </tr>
@@ -95,7 +95,7 @@ const Cart = () => {
                 <div className="flex items-center gap-4">
                   <span className="w-1/3 font-semibold text-black ">Total</span>
                   <div className="w-4/3 flex justify-end">
-                    <span className=" font-semibold text-primary text-base">
+                    <span className=" font-semibold text-[#B88E2F] text-base">
                       Rs. {finalTotal}
                     </span>
                   </div>
@@ -105,7 +105,7 @@ const Cart = () => {
               <div className="justify-end card-actions mt-6">
                 <Link
                   to="/checkout"
-                  className="btn btn-primary shadow-none border-none"
+                  className="btn btn-[#B88E2F] shadow-none border-none"
                 >
                   Check Out
                 </Link>

@@ -16,7 +16,7 @@ const MainLayout = () => {
        {navigation.state === "loading" && (
         <div className="fixed inset-0 flex flex-col justify-center items-center bg-white z-50 space-y-3">
          <Triangle height="80" width="80" color="#b88e2f"/>
-         <h6 className="text-center text-primary font-semibold text-2xl uppercase tracking-wider">Loading ...</h6>
+         <h6 className="text-center text-[#B88E2F] font-semibold text-2xl uppercase tracking-wider">Loading ...</h6>
         </div>
       )}
       <div className="relative">

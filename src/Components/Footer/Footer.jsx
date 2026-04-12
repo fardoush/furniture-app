@@ -4,10 +4,10 @@ import { Link } from "react-router";
 
 const Footer = () => {
     const link = <>
-    <Link to="/" className="link link-hover hover:text-primary transition-all duration-500">Home</Link>
-    <Link to="/shop" className="link link-hover hover:text-primary transition-all duration-500">Shop</Link>
-    <Link to="/about" className="link link-hover hover:text-primary transition-all duration-500">About</Link>
-    <Link to="/contact" className="link link-hover hover:text-primary transition-all duration-500">Contact</Link>
+    <Link to="/" className="link link-hover hover:text-[#B88E2F] transition-all duration-500">Home</Link>
+    <Link to="/shop" className="link link-hover hover:text-[#B88E2F] transition-all duration-500">Shop</Link>
+    <Link to="/about" className="link link-hover hover:text-[#B88E2F] transition-all duration-500">About</Link>
+    <Link to="/contact" className="link link-hover hover:text-[#B88E2F] transition-all duration-500">Contact</Link>
     </>
   return (
     <footer className=" bg-base-200 ">

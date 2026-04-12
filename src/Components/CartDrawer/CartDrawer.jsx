@@ -70,7 +70,7 @@ const total = cartItem.reduce(
                   <span>
                     <X size={14} />
                   </span>
-                  <span className="text-primary md:text-base text-sm">
+                  <span className="text-[#B88E2F] md:text-base text-sm">
                    Rp {((cart?.price || 0) * (cart?.quantity || 0)).toLocaleString()}
                   </span>
                 </div>
@@ -93,7 +93,7 @@ const total = cartItem.reduce(
       <div className="">
         <div className="flex items-center justify-between px-4">
           <span className="">Subtitle</span>
-          <h6 className="text-primary text-xl">Rs.{total}</h6>
+          <h6 className="text-[#B88E2F] text-xl">Rs.{total}</h6>
         </div>
         <div className="divider"></div>
         <div className="flex items-center justify-center md:gap-3 gap-2  py-4 md:px-6">

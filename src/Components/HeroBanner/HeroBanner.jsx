@@ -14,14 +14,14 @@ const HeroBanner = () => {
           <span className="font-semibold text-base pb-1 tracking-[3px] ">
             New Arrival
           </span>
-          <h1 className="text-primary lg:text-[52px] md:text-5xl text-3xl line-clamp-2 font-bold lg:leading-[64px] md:leading-[54px] leading-[32px] pb-4">
+          <h1 className="text-[#B88E2F] lg:text-[52px] md:text-5xl text-3xl line-clamp-2 font-bold lg:leading-[64px] md:leading-[54px] leading-[32px] pb-4">
             Discover Our <span className="block">New Collection</span>
           </h1>
           <p className="text-[18px] pb-10">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
             tellus, luctus nec ullamcorper mattis.
           </p>
-          <button className="lg:py-5 lg:px-[72px] py-4 px-12 bg-primary hover:bg-[#a37a26] transition-colors duration-300 text-white capitalize font-bold text-base ">
+          <button className="lg:py-5 lg:px-[72px] py-4 px-12 bg-[#B88E2F] hover:bg-[#a37a26] transition-colors duration-300 text-white capitalize font-bold text-base ">
             BUY NOW
           </button>
         </div>

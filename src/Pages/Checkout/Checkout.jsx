@@ -57,7 +57,7 @@ const totalPrice = cartItem.reduce(
                     type="text"
                     name="firstname"
                     required
-                    className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]"
                   />
                 </div>
                 <div className="flex flex-col gap-2">
@@ -66,7 +66,7 @@ const totalPrice = cartItem.reduce(
                     type="text"
                     name="lastname"
                     required
-                    className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-primary"
+                    className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]"
                   />
                 </div>
               </div>
@@ -77,7 +77,7 @@ const totalPrice = cartItem.reduce(
                   type="text"
                   name="companyname"
                   required
-                  className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]"
                 />
               </div>
 
@@ -85,7 +85,7 @@ const totalPrice = cartItem.reduce(
                 <label className="font-medium">Country / Region</label>
                 <select
                   name="country"
-                  className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]"
                 >
                   <option>Bangladesh</option>
                   <option>Sri Lanka</option>
@@ -99,7 +99,7 @@ const totalPrice = cartItem.reduce(
                   name="address"
                   required
                   placeholder="House number and street name"
-                  className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]"
                 />
               </div>
 
@@ -109,7 +109,7 @@ const totalPrice = cartItem.reduce(
                   type="text"
                   name="city"
                   required
-                  className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]"
                 />
               </div>
 
@@ -119,7 +119,7 @@ const totalPrice = cartItem.reduce(
                   type="email"
                   name="email"
                   required
-                  className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="border border-gray-400 rounded-md p-3 focus:outline-none focus:ring-1 focus:ring-[#B88E2F]"
                 />
               </div>
 
@@ -129,7 +129,7 @@ const totalPrice = cartItem.reduce(
                   name="info"
                   placeholder="Additional information"
                   required
-                  className="border border-gray-400 rounded-md p-3 w-full focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="border border-gray-400 rounded-md p-3 w-full focus:outline-none focus:ring-1 focus:ring-[#B88E2F]"
                 />
               </div>
             </div>
@@ -164,7 +164,7 @@ const totalPrice = cartItem.reduce(
             <hr className="mb-6" />
             <div className="flex justify-between">
               <p className="font-medium text-xl">Total</p>
-              <p className="text-2xl font-bold text-primary">
+              <p className="text-2xl font-bold text-[#B88E2F]">
                 Rs. {totalPrice}
               </p>
             </div>
@@ -191,13 +191,13 @@ const totalPrice = cartItem.reduce(
               Your personal data will be used to support your experience
               throughout this website, to manage access to your account, and for
               other purposes described in our
-              <span className="font-bold hover:text-primary transition-all duration-500">
+              <span className="font-bold hover:text-[#B88E2F] transition-all duration-500">
                 privacy policy.
               </span>
             </p>
 
             <div className="flex ">
-              <button className="border border-primary text-primary px-16 py-3 rounded-xl hover:bg-primary  focus:bg-primary focus:text-white hover:text-white transition-all text-xl">
+              <button className="border border-[#B88E2F] text-[#B88E2F] px-16 py-3 rounded-xl hover:bg-[#B88E2F]  focus:bg-[#B88E2F] focus:text-white hover:text-white transition-all text-xl">
                 Place Order
               </button>
             </div>

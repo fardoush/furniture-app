@@ -15,20 +15,20 @@ const BlogCard = ({blog}) => {
               />
               <div className="flex items-center gap-6 text-gray-500 text-sm">
                 <span className="flex items-center gap-2">
-                  <FaUser className="text-primary" /> {author}
+                  <FaUser className="text-[#B88E2F]" /> {author}
                 </span>
                 <span className="flex items-center gap-2">
-                  <FaCalendar className="text-primary" /> {date}
+                  <FaCalendar className="text-[#B88E2F]" /> {date}
                 </span>
                 <span className="flex items-center gap-2">
-                  <FaTag className="text-primary" /> {blogCategory}
+                  <FaTag className="text-[#B88E2F]" /> {blogCategory}
                 </span>
               </div>
               <h2 className="text-3xl font-bold text-gray-800">{title}</h2>
               <p className="text-gray-600 leading-relaxed">
                 {isExpanded ?  description : description.slice(0,100) + "..."}
               </p>
-              <button onClick={() => setIsExpanded(!isExpanded)} className="border-b-2 border-[#B88E2F] pb-1 font-medium hover:text-primary transition-all duration-500">
+              <button onClick={() => setIsExpanded(!isExpanded)} className="border-b-2 border-[#B88E2F] pb-1 font-medium hover:text-[#B88E2F] transition-all duration-500">
                 {isExpanded ? "Read less" : "Read more"}
               </button>
 
