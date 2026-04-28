@@ -1,4 +1,4 @@
-<img width="1920" height="5106" alt="image" src="https://github.com/user-attachments/assets/03df7e98-ef63-4634-ae8b-6b0f098c7340" /># 🛋️ Home Decor Furniture App
+# 🛋️ Home Decor Furniture App
 
 A modern and responsive furniture & home decor website built with React and Tailwind CSS.  
 Users can explore different types of furniture, view product details, and enjoy a clean UI/UX experience.
@@ -32,7 +32,7 @@ Users can explore different types of furniture, view product details, and enjoy 
 ## 📸 Screenshots
 
 <!-- Add your screenshots here -->
-<!-- Example:
+
 ![Home Page]((https://i.ibb.co.com/S4wVgnYL/screencapture-home-decor-furniture-app-netlify-app-2026-04-28-00-40-40.png))
 ![Home Page Cart] (https://i.ibb.co.com/7tNnTH4g/screencapture-home-decor-furniture-app-netlify-app-2026-04-28-00-51-42.png)
 ![Shop Page] (https://i.ibb.co.com/JjFYn9TQ/screencapture-home-decor-furniture-app-netlify-app-shop-2026-04-28-00-42-51.png)
@@ -43,7 +43,6 @@ Users can explore different types of furniture, view product details, and enjoy 
 ![Contact Page] (https://i.ibb.co.com/x83fz8v3/screencapture-home-decor-furniture-app-netlify-app-contact-2026-04-28-00-46-23.png)
 ![Blog Page] (https://i.ibb.co.com/Kzjr9H8x/screencapture-home-decor-furniture-app-netlify-app-blog-2026-04-28-00-47-26.png)
 
--->
 
 ---
 
